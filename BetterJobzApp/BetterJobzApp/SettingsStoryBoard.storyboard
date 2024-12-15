@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gee-vr-hlQ">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="2WP-fS-LS4">
+            <objects>
+                <viewController id="Tu1-fJ-IDM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WDU-K5-d37">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXP-Ag-jqa">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7j-Uu-O4p">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="2500"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Picture1_circular" translatesAutoresizingMaskIntoConstraints="NO" id="n88-CN-UNT">
+                                                <rect key="frame" x="-82" y="36" width="173" height="207"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Picture1_circular" translatesAutoresizingMaskIntoConstraints="NO" id="yFq-jf-8vi">
+                                                <rect key="frame" x="332" y="248" width="173" height="207"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Picture1_circular" translatesAutoresizingMaskIntoConstraints="NO" id="SH3-dH-Xr1">
+                                                <rect key="frame" x="-82" y="532" width="173" height="207"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Picture1_circular" translatesAutoresizingMaskIntoConstraints="NO" id="YJo-Cb-TYq">
+                                                <rect key="frame" x="-72" y="1265" width="173" height="207"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Picture1_circular" translatesAutoresizingMaskIntoConstraints="NO" id="0og-dU-2Ws">
+                                                <rect key="frame" x="332" y="904" width="173" height="207"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Picture1_circular" translatesAutoresizingMaskIntoConstraints="NO" id="ki3-dr-M9I">
+                                                <rect key="frame" x="342" y="1615" width="173" height="207"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Picture1_circular" translatesAutoresizingMaskIntoConstraints="NO" id="84O-Nu-gbF">
+                                                <rect key="frame" x="-82" y="1912" width="173" height="207"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Picture1_circular" translatesAutoresizingMaskIntoConstraints="NO" id="Svl-vR-r5o">
+                                                <rect key="frame" x="332" y="2293" width="173" height="207"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2a8-2i-TIH">
+                                                <rect key="frame" x="138" y="8" width="154" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W33-5C-jRK">
+                                                <rect key="frame" x="35" y="46" width="326" height="2446"/>
+                                                <string key="text">Effective Date: November 13, 2024
+
+BetterJobz (“we,” “our,” or “us”) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use the BetterJobz mobile application (“App”). By using BetterJobz, you agree to the collection and use of information in accordance with this policy.
+
+1. Information We Collect
+
+We collect limited personal information to provide and improve our service to you, including:
+
+	•	Username
+	•	Password
+	•	Email address
+	•	Phone number
+	•	Occupation
+
+2. How We Use Your Information
+
+We use your information to:
+
+	•	Facilitate job search and application processes
+	•	Personalize job recommendations based on your profile
+	•	Communicate with you regarding updates, offers, or any issues with your account
+	•	Enforce our Terms of Service and protect the integrity of our platform
+
+3. Disclosure of Your Information
+
+We may share your information:
+
+	•	With employers when you apply for a job or when your profile matches an employer’s job requirements
+	•	To comply with legal obligations, such as a court order or subpoena, or to protect our rights
+
+4. Data Security
+
+We strive to use commercially acceptable means to protect your information. However, no method of transmission over the internet, or method of electronic storage, is 100% secure, and we cannot guarantee absolute security.
+
+5. Retention of Your Information
+
+We will retain your information for as long as your account is active or as necessary to provide you with our services. You can request deletion of your account and associated data by contacting us at the details below.
+
+6. Children’s Privacy
+
+Our App is not intended for individuals under the age of 18. We do not knowingly collect or solicit personal information from children. If we learn that we have collected personal information from a child, we will delete that information promptly.
+
+7. Your Rights
+
+Depending on your jurisdiction, you may have rights to access, correct, delete, or restrict the use of your personal information. To exercise these rights, please contact us at the details below.
+
+8. Changes to This Privacy Policy
+
+We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy within the App. You are advised to review this policy periodically for any updates.
+
+9. Contact Us
+
+If you have questions or concerns regarding this Privacy Policy, please contact us at:
+
+	•	Email: BetterJobztm@gmail.com
+	•	Phone: +973 3211 6262</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="2a8-2i-TIH" firstAttribute="leading" secondItem="h7j-Uu-O4p" secondAttribute="leading" constant="138" id="KMa-BE-i0f"/>
+                                            <constraint firstItem="W33-5C-jRK" firstAttribute="bottom" secondItem="h7j-Uu-O4p" secondAttribute="bottomMargin" id="NWU-ix-udt"/>
+                                            <constraint firstItem="W33-5C-jRK" firstAttribute="leading" secondItem="h7j-Uu-O4p" secondAttribute="leading" constant="52" id="daa-9F-3hl"/>
+                                            <constraint firstItem="2a8-2i-TIH" firstAttribute="top" secondItem="h7j-Uu-O4p" secondAttribute="topMargin" id="jfS-23-A6P"/>
+                                            <constraint firstAttribute="height" constant="2500" id="sbc-cy-8xz"/>
+                                            <constraint firstItem="2a8-2i-TIH" firstAttribute="centerX" secondItem="W33-5C-jRK" secondAttribute="centerX" id="yln-Xr-9h8"/>
+                                            <constraint firstItem="W33-5C-jRK" firstAttribute="top" secondItem="2a8-2i-TIH" secondAttribute="bottom" constant="8" id="zzb-Jg-9FF"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="h7j-Uu-O4p" firstAttribute="centerX" secondItem="aXP-Ag-jqa" secondAttribute="centerX" id="cbT-vb-k3v"/>
+                                    <constraint firstAttribute="trailing" secondItem="h7j-Uu-O4p" secondAttribute="trailing" id="fe2-oK-ZfR"/>
+                                    <constraint firstAttribute="bottom" secondItem="h7j-Uu-O4p" secondAttribute="bottom" id="jWc-Gc-ivy"/>
+                                    <constraint firstItem="h7j-Uu-O4p" firstAttribute="leading" secondItem="aXP-Ag-jqa" secondAttribute="leading" id="jbC-vZ-qKo"/>
+                                    <constraint firstItem="h7j-Uu-O4p" firstAttribute="top" secondItem="aXP-Ag-jqa" secondAttribute="top" id="jnk-3e-WFc"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ein-GI-vj6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aXP-Ag-jqa" firstAttribute="width" secondItem="WDU-K5-d37" secondAttribute="width" id="KSg-Nt-DNd"/>
+                            <constraint firstItem="aXP-Ag-jqa" firstAttribute="trailing" secondItem="ein-GI-vj6" secondAttribute="trailing" id="Ouq-EQ-xV5"/>
+                            <constraint firstItem="aXP-Ag-jqa" firstAttribute="bottom" secondItem="ein-GI-vj6" secondAttribute="bottom" id="gGK-0b-XC7"/>
+                            <constraint firstItem="aXP-Ag-jqa" firstAttribute="top" secondItem="ein-GI-vj6" secondAttribute="top" id="jXf-YD-jah"/>
+                            <constraint firstItem="aXP-Ag-jqa" firstAttribute="leading" secondItem="ein-GI-vj6" secondAttribute="leading" id="uvP-ZM-67p"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g8k-nc-x2Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4705" y="-546"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="gNE-Td-iMa">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gee-vr-hlQ" customClass="TabBarViewController" customModule="BetterJobzApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5cT-XT-VT5">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="standardAppearance"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="gul-SC-qgy" kind="relationship" relationship="viewControllers" id="vId-E6-Q2R"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zRp-GB-DSW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2465" y="-2"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="imb-1q-yrs">
+            <objects>
+                <viewController storyboardIdentifier="Settings_REF" id="gul-SC-qgy" customClass="SettingsViewController" customModule="BetterJobzApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="45R-a3-TEE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="EfV-wK-3sk">
+                                <rect key="frame" x="39" y="157.33333333333334" width="315" height="452.66666666666663"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvA-oF-Wcs">
+                                        <rect key="frame" x="69.000000000000014" y="0.0" width="177.33333333333337" height="44"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Privacy Policy">
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Tu1-fJ-IDM" kind="popoverPresentation" popoverAnchorView="dvA-oF-Wcs" id="svX-Vz-D5k">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eD-ln-zOq">
+                                        <rect key="frame" x="94" y="82" width="127" height="44"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="About Us">
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="L73-xa-wOw" kind="popoverPresentation" popoverAnchorView="4eD-ln-zOq" id="Zgh-uY-Tqe">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help &amp; Support" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DZ-4u-qCU">
+                                        <rect key="frame" x="75.000000000000014" y="170.99999999999997" width="165.33333333333337" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   BetterJobztm@gmail.com    " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uZ-t7-6kb">
+                                        <rect key="frame" x="0.0" y="253" width="315" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+973 3211 6262" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9G-U0-oWS">
+                                        <rect key="frame" x="66.333333333333329" y="335" width="182.66666666666669" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwA-8o-OlR">
+                                        <rect key="frame" x="101.33333333333334" y="408.66666666666663" width="112.33333333333334" height="44"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Log Out">
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
+                                            <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="LogOut:" destination="gul-SC-qgy" eventType="touchUpInside" id="6jZ-We-kTg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EfV-wK-3sk" secondAttribute="height" multiplier="158:227" id="Xil-GX-cMt"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvh-0h-kdO">
+                                <rect key="frame" x="122" y="90" width="149" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2nz-px-wyd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2nz-px-wyd" firstAttribute="bottom" secondItem="EfV-wK-3sk" secondAttribute="bottom" constant="159" id="37E-La-Bco"/>
+                            <constraint firstItem="jvh-0h-kdO" firstAttribute="leading" secondItem="2nz-px-wyd" secondAttribute="leading" constant="122" id="NPN-GR-mdr"/>
+                            <constraint firstItem="EfV-wK-3sk" firstAttribute="top" secondItem="jvh-0h-kdO" secondAttribute="bottom" constant="24.333333333333343" id="O3a-3U-co6"/>
+                            <constraint firstItem="2nz-px-wyd" firstAttribute="trailing" secondItem="EfV-wK-3sk" secondAttribute="trailing" constant="39" id="QmA-9j-kwR"/>
+                            <constraint firstItem="EfV-wK-3sk" firstAttribute="leading" secondItem="2nz-px-wyd" secondAttribute="leading" constant="39" id="fsF-o7-7tR"/>
+                            <constraint firstItem="jvh-0h-kdO" firstAttribute="top" secondItem="45R-a3-TEE" secondAttribute="topMargin" constant="31" id="iZs-Je-44e"/>
+                            <constraint firstItem="jvh-0h-kdO" firstAttribute="centerX" secondItem="EfV-wK-3sk" secondAttribute="centerX" id="sBc-Ho-Ea9"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="gear" catalog="system" selectedImage="gear" id="88f-oA-FpX"/>
+                    <navigationItem key="navigationItem" id="ADh-tX-QQA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iq1-Bh-SMa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3425" y="-2"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lPR-3n-gx7">
+            <objects>
+                <viewController id="L73-xa-wOw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yjc-7F-3Oe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8a-OQ-yCg">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2oa-co-9Rq">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="2166"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Picture1_circular" translatesAutoresizingMaskIntoConstraints="NO" id="T8c-fg-N3l">
+                                                <rect key="frame" x="291" y="-49" width="173" height="207"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Picture1_circular" translatesAutoresizingMaskIntoConstraints="NO" id="yZA-cb-eJT">
+                                                <rect key="frame" x="-71" y="152" width="173" height="207"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Picture1_circular" translatesAutoresizingMaskIntoConstraints="NO" id="4V4-L2-c85">
+                                                <rect key="frame" x="260" y="417" width="173" height="207"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Picture1_circular" translatesAutoresizingMaskIntoConstraints="NO" id="DMu-gF-PIF">
+                                                <rect key="frame" x="-45" y="680" width="173" height="207"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Picture1_circular" translatesAutoresizingMaskIntoConstraints="NO" id="6TV-di-zRp">
+                                                <rect key="frame" x="279" y="969" width="173" height="207"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Picture1_circular" translatesAutoresizingMaskIntoConstraints="NO" id="whA-Yj-yHs">
+                                                <rect key="frame" x="-45" y="1255" width="173" height="207"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Picture1_circular" translatesAutoresizingMaskIntoConstraints="NO" id="HJ3-Yi-FTv">
+                                                <rect key="frame" x="-71" y="1938" width="173" height="207"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Picture1_circular" translatesAutoresizingMaskIntoConstraints="NO" id="TCG-Al-gxc">
+                                                <rect key="frame" x="251" y="1582" width="173" height="207"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isF-tV-zgD">
+                                                <rect key="frame" x="145" y="51" width="103" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="nla-jp-s71"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSi-bY-hjx">
+                                                <rect key="frame" x="17" y="119" width="359" height="2166"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2166" id="rkt-bp-DqA"/>
+                                                </constraints>
+                                                <string key="text">Welcome to BetterJobz – your dedicated partner in finding the perfect job in Bahrain. We believe that job searching should be easy, efficient, and tailored to your goals. That’s why we’ve created a platform that connects job seekers with employers seamlessly and intuitively, making the hiring process better for everyone.
+
+Our Mission
+
+At BetterJobz, our mission is to empower job seekers and employers by providing a platform that bridges the gap between talent and opportunity. We are committed to supporting Bahrain’s growing workforce with accessible, user-friendly tools that bring together experience, ambition, and opportunity in one place.
+
+What We Do
+
+BetterJobz simplifies the job search process by offering personalized job recommendations based on your skills, experience, and interests. Our platform enables you to create a profile, explore relevant job openings, and apply directly with just a few clicks. For employers, BetterJobz makes finding the right candidate faster and more effective by providing access to a talent pool with diverse skills and backgrounds.
+
+Why Choose BetterJobz?
+
+	•	Focused on Bahrain: We understand the unique dynamics of Bahrain’s job market and are committed to delivering a tailored experience for local job seekers and businesses.
+	•	Easy-to-Use Platform: Our app is designed with simplicity and convenience in mind, helping you find and apply for jobs without the hassle.
+	•	Personalized Job Recommendations: We connect you to job opportunities that align with your skills and career goals.
+	•	Security and Privacy: Your data privacy is important to us. We only collect essential information and are committed to safeguarding your personal information.
+
+Join the BetterJobz Community
+
+Whether you’re just starting your career, looking for a change, or seeking talent to grow your team, BetterJobz is here to support you. Join our community and take the next step in your career or recruitment journey with confidence.
+
+For any questions or feedback, please reach out to us at:
+
+	•	Email: BetterJobztm@gmail.com
+	•	Phone: +973 3211 6262</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="JSi-bY-hjx" firstAttribute="centerX" secondItem="isF-tV-zgD" secondAttribute="centerX" id="5vA-3w-iuX"/>
+                                            <constraint firstItem="JSi-bY-hjx" firstAttribute="top" secondItem="isF-tV-zgD" secondAttribute="bottom" constant="8" id="Mef-kp-YA1"/>
+                                            <constraint firstItem="JSi-bY-hjx" firstAttribute="leading" secondItem="2oa-co-9Rq" secondAttribute="leading" constant="17" id="PjC-GR-Q3z"/>
+                                            <constraint firstItem="JSi-bY-hjx" firstAttribute="top" secondItem="2oa-co-9Rq" secondAttribute="top" constant="119" id="Qdb-Lg-dq9"/>
+                                            <constraint firstItem="JSi-bY-hjx" firstAttribute="centerX" secondItem="2oa-co-9Rq" secondAttribute="centerX" id="lLB-SO-koX"/>
+                                            <constraint firstAttribute="height" constant="2166" id="pi5-aI-ern"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="2oa-co-9Rq" secondAttribute="bottom" id="3cB-Qv-5Ld"/>
+                                    <constraint firstItem="2oa-co-9Rq" firstAttribute="leading" secondItem="q8a-OQ-yCg" secondAttribute="leading" id="7oV-cO-YQh"/>
+                                    <constraint firstItem="2oa-co-9Rq" firstAttribute="centerX" secondItem="q8a-OQ-yCg" secondAttribute="centerX" id="TZR-WF-J1e"/>
+                                    <constraint firstItem="2oa-co-9Rq" firstAttribute="top" secondItem="q8a-OQ-yCg" secondAttribute="top" id="raa-9I-ANG"/>
+                                    <constraint firstAttribute="trailing" secondItem="2oa-co-9Rq" secondAttribute="trailing" id="zIh-RQ-4Ed"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VyH-yu-QNL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="q8a-OQ-yCg" firstAttribute="leading" secondItem="VyH-yu-QNL" secondAttribute="leading" id="8hi-74-S48"/>
+                            <constraint firstItem="q8a-OQ-yCg" firstAttribute="bottom" secondItem="VyH-yu-QNL" secondAttribute="bottom" id="T7M-7i-1KM"/>
+                            <constraint firstItem="q8a-OQ-yCg" firstAttribute="height" secondItem="yjc-7F-3Oe" secondAttribute="height" id="VFB-Gz-V3W"/>
+                            <constraint firstItem="q8a-OQ-yCg" firstAttribute="top" secondItem="VyH-yu-QNL" secondAttribute="top" id="kgC-Vo-So0"/>
+                            <constraint firstItem="q8a-OQ-yCg" firstAttribute="width" secondItem="yjc-7F-3Oe" secondAttribute="width" id="ouy-44-MKj"/>
+                            <constraint firstItem="q8a-OQ-yCg" firstAttribute="trailing" secondItem="VyH-yu-QNL" secondAttribute="trailing" id="w7X-oQ-wtH"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R9h-Cm-UEa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5649.6183206106871" y="295.77464788732397"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Picture1_circular" width="612" height="614"/>
+        <image name="gear" catalog="system" width="128" height="122"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
