@@ -99,7 +99,7 @@
                                         <color key="shadowColor" systemColor="scrollViewTexturedBackgroundColor"/>
                                         <size key="shadowOffset" width="0.0" height="2"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TM7-kY-6xg">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TM7-kY-6xg">
                                         <rect key="frame" x="0.0" y="87" width="290" height="20.333333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="290" id="2ed-W5-jmv"/>
@@ -109,7 +109,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="EkM-LW-vcn">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="EkM-LW-vcn">
                                         <rect key="frame" x="0.0" y="121.33333333333331" width="290" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="Wif-ql-tiG"/>
@@ -166,9 +166,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="cl8-9m-xgu"/>
                     <connections>
-                        <outlet property="Password" destination="ycX-BL-zPI" id="M2F-C8-PAF"/>
-                        <outlet property="Username" destination="EkM-LW-vcn" id="9rd-qJ-ZFA"/>
+                        <outlet property="Password" destination="ycX-BL-zPI" id="ram-zl-VwP"/>
+                        <outlet property="Username" destination="EkM-LW-vcn" id="ON5-xc-n1I"/>
                         <segue destination="6Ae-h1-kys" kind="presentation" identifier="showDashboardSegue" modalPresentationStyle="fullScreen" id="rgm-7d-nwF"/>
+                        <segue destination="mOS-eO-Ih6" kind="presentation" identifier="goToEmpHome" id="yqc-RW-x3n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="acM-Su-wnG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -183,7 +184,15 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dIo-0G-dxe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2769" y="297"/>
+            <point key="canvasLocation" x="2795" y="-161"/>
+        </scene>
+        <!--EmpDashboardStroryBoard-->
+        <scene sceneID="yCW-bY-tCh">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="EMP_Dashboard" storyboardName="EmpDashboardStroryBoard" id="mOS-eO-Ih6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a5G-ax-6gV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2793" y="157"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="B9c-hT-Cj2">
@@ -448,14 +457,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1s9-df-hAP"/>
+        <segue reference="aEh-GA-beQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="scrollViewTexturedBackgroundColor">
             <color red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

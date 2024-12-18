@@ -293,11 +293,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="paperclip" catalog="system" selectedImage="paperclip" id="oP1-jw-RUd"/>
                     <connections>
-                        <outlet property="educationTextField" destination="2U9-6a-JVu" id="lhG-XO-ONA"/>
-                        <outlet property="emailTextField" destination="P31-cf-mpa" id="ypc-8Q-0E8"/>
-                        <outlet property="languageTextField" destination="N1U-vY-JZL" id="av9-Yh-qxt"/>
-                        <outlet property="occupationTextField" destination="Li6-fP-GgM" id="rnd-KE-n0f"/>
-                        <outlet property="phoneNumberTextField" destination="qmG-UM-W07" id="egA-8g-O1C"/>
+                        <outlet property="educationTextField" destination="2U9-6a-JVu" id="bZU-Ps-NNg"/>
+                        <outlet property="emailTextField" destination="P31-cf-mpa" id="Cgh-mD-82s"/>
+                        <outlet property="fullNameTxtField" destination="Cxq-rz-i3r" id="vJC-8i-9Eg"/>
+                        <outlet property="languageTextField" destination="N1U-vY-JZL" id="hhl-po-btl"/>
+                        <outlet property="occupationTextField" destination="Li6-fP-GgM" id="6m8-Hv-yBR"/>
+                        <outlet property="phoneNumberTextField" destination="qmG-UM-W07" id="K0e-1C-owb"/>
                         <segue destination="y0Z-mc-Dsb" kind="show" identifier="showGeneratedCVSegue" id="jMX-Nb-66a"/>
                     </connections>
                 </viewController>

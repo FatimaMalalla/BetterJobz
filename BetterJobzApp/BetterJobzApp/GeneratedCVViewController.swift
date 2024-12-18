@@ -63,7 +63,6 @@ class GeneratedCVViewController: UIViewController {
         }
     }
 
-    // Format CV content
     private func formatCVContent(
         aboutMe: String,
         cvData: [String: Any],
@@ -71,6 +70,7 @@ class GeneratedCVViewController: UIViewController {
         interests: [String],
         workExperience: [String]
     ) -> NSAttributedString {
+        let fullName = cvData["fullName"] as? String ?? "N/A"
         let email = cvData["email"] as? String ?? "N/A"
         let language = cvData["language"] as? String ?? "N/A"
         let education = cvData["education"] as? String ?? "N/A"
@@ -80,96 +80,186 @@ class GeneratedCVViewController: UIViewController {
         let boldFont = UIFont.boldSystemFont(ofSize: 16)
         let regularFont = UIFont.systemFont(ofSize: 14)
         let textColor = UIColor.white
+
         let formattedCV = NSMutableAttributedString()
 
-        // Title
+        // Center-aligned paragraph style
+        let centerAlignStyle = NSMutableParagraphStyle()
+        centerAlignStyle.alignment = .center
+
+        // Left-aligned paragraph style
+        let leftAlignStyle = NSMutableParagraphStyle()
+        leftAlignStyle.alignment = .left
+
+        // Title (Center-aligned)
         formattedCV.append(NSAttributedString(
-            string: "---- CV ----\n\n",
-            attributes: [.font: boldFont, .foregroundColor: textColor]
+            string: "CV\n\n",
+            attributes: [
+                .font: boldFont,
+                .foregroundColor: textColor,
+                .paragraphStyle: centerAlignStyle
+            ]
+        ))
+
+        // Full Name (Center-aligned)
+        formattedCV.append(NSAttributedString(
+            string: "\(fullName)\n\n",
+            attributes: [
+                .font: boldFont,
+                .foregroundColor: textColor,
+                .paragraphStyle: centerAlignStyle
+            ]
+        ))
+        
+        // Contact Information
+        formattedCV.append(NSAttributedString(
+            string: "Contact Information:\n",
+            attributes: [
+                .font: boldFont,
+                .foregroundColor: textColor,
+                .paragraphStyle: leftAlignStyle
+            ]
+        ))
+        formattedCV.append(NSAttributedString(
+            string: "Email: \(email)\nPhone: \(phoneNumber)\n\n",
+            attributes: [
+                .font: regularFont,
+                .foregroundColor: textColor,
+                .paragraphStyle: leftAlignStyle
+            ]
         ))
 
         // About Me Section
         formattedCV.append(NSAttributedString(
             string: "About Me:\n",
-            attributes: [.font: boldFont, .foregroundColor: textColor]
+            attributes: [
+                .font: boldFont,
+                .foregroundColor: textColor,
+                .paragraphStyle: leftAlignStyle
+            ]
         ))
         formattedCV.append(NSAttributedString(
             string: "\(aboutMe)\n\n",
-            attributes: [.font: regularFont, .foregroundColor: textColor]
+            attributes: [
+                .font: regularFont,
+                .foregroundColor: textColor,
+                .paragraphStyle: leftAlignStyle
+            ]
         ))
 
         // Skills Section
         formattedCV.append(NSAttributedString(
             string: "Skills:\n",
-            attributes: [.font: boldFont, .foregroundColor: textColor]
+            attributes: [
+                .font: boldFont,
+                .foregroundColor: textColor,
+                .paragraphStyle: leftAlignStyle
+            ]
         ))
         formattedCV.append(NSAttributedString(
             string: "\(skills.joined(separator: ", "))\n\n",
-            attributes: [.font: regularFont, .foregroundColor: textColor]
+            attributes: [
+                .font: regularFont,
+                .foregroundColor: textColor,
+                .paragraphStyle: leftAlignStyle
+            ]
         ))
 
         // Interests Section
         formattedCV.append(NSAttributedString(
             string: "Interests:\n",
-            attributes: [.font: boldFont, .foregroundColor: textColor]
+            attributes: [
+                .font: boldFont,
+                .foregroundColor: textColor,
+                .paragraphStyle: leftAlignStyle
+            ]
         ))
         formattedCV.append(NSAttributedString(
             string: "\(interests.joined(separator: ", "))\n\n",
-            attributes: [.font: regularFont, .foregroundColor: textColor]
+            attributes: [
+                .font: regularFont,
+                .foregroundColor: textColor,
+                .paragraphStyle: leftAlignStyle
+            ]
         ))
 
         // Language Section
         formattedCV.append(NSAttributedString(
             string: "Language:\n",
-            attributes: [.font: boldFont, .foregroundColor: textColor]
+            attributes: [
+                .font: boldFont,
+                .foregroundColor: textColor,
+                .paragraphStyle: leftAlignStyle
+            ]
         ))
         formattedCV.append(NSAttributedString(
             string: "\(language)\n\n",
-            attributes: [.font: regularFont, .foregroundColor: textColor]
+            attributes: [
+                .font: regularFont,
+                .foregroundColor: textColor,
+                .paragraphStyle: leftAlignStyle
+            ]
         ))
 
         // Education Section
         formattedCV.append(NSAttributedString(
             string: "Education:\n",
-            attributes: [.font: boldFont, .foregroundColor: textColor]
+            attributes: [
+                .font: boldFont,
+                .foregroundColor: textColor,
+                .paragraphStyle: leftAlignStyle
+            ]
         ))
         formattedCV.append(NSAttributedString(
             string: "\(education)\n\n",
-            attributes: [.font: regularFont, .foregroundColor: textColor]
+            attributes: [
+                .font: regularFont,
+                .foregroundColor: textColor,
+                .paragraphStyle: leftAlignStyle
+            ]
         ))
 
         // Occupation Section
         formattedCV.append(NSAttributedString(
             string: "Occupation:\n",
-            attributes: [.font: boldFont, .foregroundColor: textColor]
+            attributes: [
+                .font: boldFont,
+                .foregroundColor: textColor,
+                .paragraphStyle: leftAlignStyle
+            ]
         ))
         formattedCV.append(NSAttributedString(
             string: "\(occupation)\n\n",
-            attributes: [.font: regularFont, .foregroundColor: textColor]
+            attributes: [
+                .font: regularFont,
+                .foregroundColor: textColor,
+                .paragraphStyle: leftAlignStyle
+            ]
         ))
 
-        // Contact Information
-        formattedCV.append(NSAttributedString(
-            string: "Contact Information:\n",
-            attributes: [.font: boldFont, .foregroundColor: textColor]
-        ))
-        formattedCV.append(NSAttributedString(
-            string: "Email: \(email)\nPhone: \(phoneNumber)\n\n",
-            attributes: [.font: regularFont, .foregroundColor: textColor]
-        ))
+      
 
         // Work Experience Section
         formattedCV.append(NSAttributedString(
             string: "Work Experience:\n",
-            attributes: [.font: boldFont, .foregroundColor: textColor]
+            attributes: [
+                .font: boldFont,
+                .foregroundColor: textColor,
+                .paragraphStyle: leftAlignStyle
+            ]
         ))
         formattedCV.append(NSAttributedString(
             string: "\(workExperience.joined(separator: ", "))\n",
-            attributes: [.font: regularFont, .foregroundColor: textColor]
+            attributes: [
+                .font: regularFont,
+                .foregroundColor: textColor,
+                .paragraphStyle: leftAlignStyle
+            ]
         ))
 
         return formattedCV
     }
+
 
     // MARK: Save as PDF
     @IBAction func saveAsPDFTapped(_ sender: UIButton) {
