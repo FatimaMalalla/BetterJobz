@@ -376,7 +376,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omF-7s-Dgi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3275.5725190839694" y="779.57746478873241"/>
+            <point key="canvasLocation" x="3462" y="755"/>
         </scene>
         <!--GeneratedCV View Controller-->
         <scene sceneID="Uv9-wV-faV">
@@ -458,7 +458,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lf7-5u-svf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="817.55725190839689" y="779.57746478873241"/>
+            <point key="canvasLocation" x="819" y="755"/>
         </scene>
         <!--Interests View Controller-->
         <scene sceneID="lNb-3t-6ZV">
@@ -550,7 +550,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BmR-0P-CWp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1684.7328244274809" y="779.57746478873241"/>
+            <point key="canvasLocation" x="1686" y="755"/>
         </scene>
         <!--Skills View Controller-->
         <scene sceneID="bbp-rU-aif">
@@ -633,7 +633,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vey-LC-ilg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2502" y="780"/>
+            <point key="canvasLocation" x="2560" y="755"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="B9X-dp-uut">

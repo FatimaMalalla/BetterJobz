@@ -11,7 +11,7 @@ class CVToolViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Load user data from Firebase
-        loadUserData()
+       // loadUserData()
         loadCVData()
     }
     
@@ -53,26 +53,30 @@ class CVToolViewController: UIViewController {
     }
 
     private func loadCVData() {
-        guard let userUID = Auth.auth().currentUser?.uid else { return }
-
+        guard let userUID = Auth.auth().currentUser?.uid else {
+            print("User UID not found.")
+            return
+        }
+        
         let databaseRef = Database.database().reference()
         databaseRef.child("users").child(userUID).child("cv").observeSingleEvent(of: .value) { snapshot in
-            print("Firebase Snapshot: \(snapshot.value ?? "No Data")") // Debugging line
+            print("Snapshot: \(snapshot.value ?? "No data found")") // Debug print
 
             guard let cvData = snapshot.value as? [String: Any] else {
                 print("No CV data found.")
                 return
             }
-
-            // Update text fields
-            self.fullNameTxtField.text = cvData["fullName"] as? String ?? "N/A"
-            self.emailTextField.text = cvData["email"] as? String ?? "N/A"
-            self.languageTextField.text = cvData["language"] as? String ?? "N/A"
-            self.educationTextField.text = cvData["education"] as? String ?? "N/A"
-            self.occupationTextField.text = cvData["occupation"] as? String ?? "N/A"
-            self.phoneNumberTextField.text = cvData["phoneNumber"] as? String ?? "N/A"
+            
+            // Assign values to the text fields
+            self.fullNameTxtField.text = cvData["fullName"] as? String ?? ""
+            self.emailTextField.text = cvData["email"] as? String ?? ""
+            self.languageTextField.text = cvData["language"] as? String ?? ""
+            self.educationTextField.text = cvData["education"] as? String ?? ""
+            self.occupationTextField.text = cvData["occupation"] as? String ?? ""
+            self.phoneNumberTextField.text = cvData["phoneNumber"] as? String ?? ""
         }
     }
+
 
 
     @IBAction func SaveBttnTapped(_ sender: UIButton) {
