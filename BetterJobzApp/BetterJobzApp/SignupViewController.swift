@@ -77,7 +77,9 @@ class SignupViewController: UIViewController {
                 
                 // Save additional user data to Firebase Realtime Database
                 let userUID = user.uid
+                let fullName = "\(firstName) \(lastName)"
                 let userData: [String: Any] = [
+                    "FullName" : fullName,
                     "FirstName": firstName,
                     "LastName": lastName,
                     "Username": username,

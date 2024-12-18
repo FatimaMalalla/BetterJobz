@@ -21,16 +21,16 @@ class LoginViewController: UIViewController {
                 }
     }
     
+
+    
+    //Employee Login Credentials : employee@gmail.com , password : EMP123
+    //Job Seeker Login Credentials : Joyce@Gmail.com , Password : JY2000
+    
+    
     @IBOutlet weak var Username: UITextField!
+    
     @IBOutlet weak var Password: UITextField!
     
-    
-    //Admin Login Credentials : Admin@gmail.com, Password : Password123
-    //Employee Login Credentials : johndoe123@gmail.com , password : PassEmp
-    //Job Seeker Login Credentials : Joyce@Gmail.com , Password : JY2000
-    //login : hj123@gmail.com  , password : Hpj123
-    
-
     @IBAction func loginButtonTapped(_ sender: Any) {
         guard let username = Username.text, !username.isEmpty,
                  let password = Password.text, !password.isEmpty else {
@@ -45,6 +45,13 @@ class LoginViewController: UIViewController {
                    self.showAlert(title: "Error", message: error.localizedDescription)
                    return
                }
+               
+               if username.lowercased().contains("employee".lowercased()) {
+                   self.performSegue(withIdentifier: "goToEmpHome", sender: sender)
+               } else {
+                   self.performSegue(withIdentifier: "showDashboardSegue", sender: sender)
+               }
+
                
                if let user = Auth.auth().currentUser {
                    print("Logged in as UID: \(user.uid)")
