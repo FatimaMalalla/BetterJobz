@@ -135,15 +135,15 @@ class CVToolViewController: UIViewController {
     }
     
     private func formatCVContent(fullName: String, aboutMe: String, cvData: [String: Any], skills: [String], interests: [String], workExperience: [String]) -> NSAttributedString {
-        let email = cvData["email"] as? String ?? "N/A"
-        let language = cvData["language"] as? String ?? "N/A"
-        let education = cvData["education"] as? String ?? "N/A"
-        let occupation = cvData["occupation"] as? String ?? "N/A"
-        let phoneNumber = cvData["phoneNumber"] as? String ?? "N/A"
+//        let email = cvData["email"] as? String ?? "N/A"
+//        let language = cvData["language"] as? String ?? "N/A"
+//        let education = cvData["education"] as? String ?? "N/A"
+//        let occupation = cvData["occupation"] as? String ?? "N/A"
+//        let phoneNumber = cvData["phoneNumber"] as? String ?? "N/A"
         
         // Define the font and styles
         let boldFont = UIFont.boldSystemFont(ofSize: 16)
-        let regularFont = UIFont.systemFont(ofSize: 14)
+        //let regularFont = UIFont.systemFont(ofSize: 14)
         let centerAlign = NSMutableParagraphStyle()
         centerAlign.alignment = .center
         

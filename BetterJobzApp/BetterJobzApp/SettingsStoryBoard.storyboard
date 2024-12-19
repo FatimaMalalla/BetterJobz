@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gee-vr-hlQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gul-SC-qgy">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -60,8 +60,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W33-5C-jRK">
-                                                <rect key="frame" x="35" y="46" width="326" height="2446"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W33-5C-jRK">
+                                                <rect key="frame" x="52" y="46" width="326" height="2446"/>
                                                 <string key="text">Effective Date: November 13, 2024
 
 BetterJobz (“we,” “our,” or “us”) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use the BetterJobz mobile application (“App”). By using BetterJobz, you agree to the collection and use of information in accordance with this policy.
@@ -159,25 +159,6 @@ If you have questions or concerns regarding this Privacy Policy, please contact 
             </objects>
             <point key="canvasLocation" x="4705" y="-546"/>
         </scene>
-        <!--Tab Bar View Controller-->
-        <scene sceneID="gNE-Td-iMa">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gee-vr-hlQ" customClass="TabBarViewController" customModule="BetterJobzApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5cT-XT-VT5">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <tabBarAppearance key="standardAppearance"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="gul-SC-qgy" kind="relationship" relationship="viewControllers" id="vId-E6-Q2R"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zRp-GB-DSW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2465" y="-2"/>
-        </scene>
         <!--Settings View Controller-->
         <scene sceneID="imb-1q-yrs">
             <objects>
@@ -187,7 +168,7 @@ If you have questions or concerns regarding this Privacy Policy, please contact 
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="EfV-wK-3sk">
-                                <rect key="frame" x="39" y="157.33333333333334" width="315" height="452.66666666666663"/>
+                                <rect key="frame" x="39" y="206.33333333333334" width="315" height="452.66666666666663"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvA-oF-Wcs">
                                         <rect key="frame" x="69.000000000000014" y="0.0" width="177.33333333333337" height="44"/>
@@ -203,7 +184,7 @@ If you have questions or concerns regarding this Privacy Policy, please contact 
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eD-ln-zOq">
-                                        <rect key="frame" x="94" y="82" width="127" height="44"/>
+                                        <rect key="frame" x="94" y="81.999999999999972" width="127" height="44"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="About Us">
                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
@@ -258,7 +239,7 @@ If you have questions or concerns regarding this Privacy Policy, please contact 
                                 </userDefinedRuntimeAttributes>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvh-0h-kdO">
-                                <rect key="frame" x="122" y="90" width="149" height="43"/>
+                                <rect key="frame" x="122" y="90" width="149" height="92"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -421,7 +402,7 @@ For any questions or feedback, please reach out to us at:
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

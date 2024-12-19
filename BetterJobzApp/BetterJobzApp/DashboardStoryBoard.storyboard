@@ -264,24 +264,6 @@ Job Available</string>
             </objects>
             <point key="canvasLocation" x="-2575" y="-30"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="sQB-oO-xqW">
-            <objects>
-                <viewController id="yB5-gJ-y2L" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Y4L-Gp-X8D">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="EpS-Zt-Nz6"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" selectedImage="person.fill" id="wWw-eb-HMN">
-                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4HT-9c-C19" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1822" y="282"/>
-        </scene>
         <!--Settings_REF-->
         <scene sceneID="vUk-mj-A7k">
             <objects>
@@ -291,6 +273,16 @@ Job Available</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51n-5z-Y3q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-958" y="-30"/>
+        </scene>
+        <!--ProfileStoryBoard-->
+        <scene sceneID="GPg-lb-IWS">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Profile_Ref" storyboardName="ProfileStoryBoard" id="w8o-5E-ara" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="1j8-oo-RxG"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jzC-xu-vV8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1752" y="37"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="9v6-f1-uiI">
@@ -302,10 +294,11 @@ Job Available</string>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.1453614533" green="0.23530036209999999" blue="0.41938996319999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
-                        <color key="tintColor" red="0.16620052708645153" green="0.40306201893976634" blue="0.8771048798053096" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <tabBarAppearance key="standardAppearance" backgroundImageContentMode="bottom" stackedItemSpacing="0.0">
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="selectionIndicatorTintColor" red="0.16197601540000001" green="0.3928169239" blue="0.85481048729999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </tabBarAppearance>
                         <userDefinedRuntimeAttributes>
@@ -316,9 +309,9 @@ Job Available</string>
                     </tabBar>
                     <connections>
                         <segue destination="K2s-Fe-mK5" kind="relationship" relationship="viewControllers" id="OUS-ym-YGq"/>
-                        <segue destination="PBr-ej-k56" kind="relationship" relationship="viewControllers" id="NnF-ia-eX4"/>
-                        <segue destination="yB5-gJ-y2L" kind="relationship" relationship="viewControllers" id="nWG-iX-CvX"/>
-                        <segue destination="S12-ut-LXX" kind="relationship" relationship="viewControllers" id="FLo-Iy-DRS"/>
+                        <segue destination="PBr-ej-k56" kind="relationship" relationship="viewControllers" id="GEP-jS-efD"/>
+                        <segue destination="w8o-5E-ara" kind="relationship" relationship="viewControllers" id="fwb-yF-jur"/>
+                        <segue destination="S12-ut-LXX" kind="relationship" relationship="viewControllers" id="LCB-Ya-RBk"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G3x-aF-grl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -333,13 +326,12 @@ Job Available</string>
         <image name="arrow.right" catalog="system" width="128" height="95"/>
         <image name="engineerjob" width="430" height="242"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="teacherJob" width="334" height="248"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
