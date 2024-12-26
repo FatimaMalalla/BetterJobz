@@ -32,6 +32,9 @@
 		C345BACE2D0B3A8700205693 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C345BACD2D0B3A8700205693 /* InterestsViewController.swift */; };
 		C345BAD42D0B403200205693 /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C345BAD32D0B403200205693 /* SkillsViewController.swift */; };
 		C345BAD82D0B49F100205693 /* WorkEXPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C345BAD72D0B49F100205693 /* WorkEXPViewController.swift */; };
+		C379376E2D1D9E4B00C0F90F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C379376D2D1D9E4B00C0F90F /* SearchViewController.swift */; };
+		C37937702D1DA0D600C0F90F /* Jopss.swift in Sources */ = {isa = PBXBuildFile; fileRef = C379376F2D1DA0D600C0F90F /* Jopss.swift */; };
+		C37937722D1DA14300C0F90F /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37937712D1DA14300C0F90F /* FilterViewController.swift */; };
 		C3A8360F2CFC6BF200A1AFB2 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = C3A8360E2CFC6BF200A1AFB2 /* FirebaseCore */; };
 		C3A836112CFC6C0200A1AFB2 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = C3A836102CFC6C0200A1AFB2 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		C3A836132CFC6C0600A1AFB2 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C3A836122CFC6C0600A1AFB2 /* FirebaseAnalytics */; };
@@ -101,6 +104,9 @@
 		C345BACD2D0B3A8700205693 /* InterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
 		C345BAD32D0B403200205693 /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
 		C345BAD72D0B49F100205693 /* WorkEXPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkEXPViewController.swift; sourceTree = "<group>"; };
+		C379376D2D1D9E4B00C0F90F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		C379376F2D1DA0D600C0F90F /* Jopss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jopss.swift; sourceTree = "<group>"; };
+		C37937712D1DA14300C0F90F /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		C3F131E92D0AF55600861187 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C3F131FF2D0B20A900861187 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		CF18169A2D097C8C00D0162A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +203,9 @@
 				C311BCD52CFF3E980063F268 /* LoginViewController.swift */,
 				C311BCD32CFF3E0E0063F268 /* SignupViewController.swift */,
 				D43E51B82CF6064200916325 /* DashboardStoryBoard.storyboard */,
+				C37937712D1DA14300C0F90F /* FilterViewController.swift */,
+				C379376D2D1D9E4B00C0F90F /* SearchViewController.swift */,
+				C379376F2D1DA0D600C0F90F /* Jopss.swift */,
 				AC9843792D1D91170085C628 /* ChefViewController.swift */,
 				AC98437F2D1D919B0085C628 /* EngineerViewController.swift */,
 				AC98437B2D1D91460085C628 /* SoftwareEngineerViewController.swift */,
@@ -425,7 +434,10 @@
 				C345BAD82D0B49F100205693 /* WorkEXPViewController.swift in Sources */,
 				D43E517D2CF5EA3600916325 /* SceneDelegate.swift in Sources */,
 				AC98437C2D1D91460085C628 /* SoftwareEngineerViewController.swift in Sources */,
+				C37937702D1DA0D600C0F90F /* Jopss.swift in Sources */,
 				ACBFCC082D1D699F00819FBD /* TutorialSecondPageViewController.swift in Sources */,
+				C379376E2D1D9E4B00C0F90F /* SearchViewController.swift in Sources */,
+				C37937722D1DA14300C0F90F /* FilterViewController.swift in Sources */,
 				C3F131EA2D0AF55600861187 /* TabBarViewController.swift in Sources */,
 				CF18169B2D097C8C00D0162A /* SettingsViewController.swift in Sources */,
 				ACBFCC042D1D676500819FBD /* VideoViewController.swift in Sources */,
