@@ -20,6 +20,12 @@
 		C345BACE2D0B3A8700205693 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C345BACD2D0B3A8700205693 /* InterestsViewController.swift */; };
 		C345BAD42D0B403200205693 /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C345BAD32D0B403200205693 /* SkillsViewController.swift */; };
 		C345BAD82D0B49F100205693 /* WorkEXPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C345BAD72D0B49F100205693 /* WorkEXPViewController.swift */; };
+		C379375B2D1D431F00C0F90F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37937552D1D431E00C0F90F /* DashboardViewController.swift */; };
+		C379375C2D1D431F00C0F90F /* SoftwareEngineerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37937562D1D431E00C0F90F /* SoftwareEngineerViewController.swift */; };
+		C379375D2D1D431F00C0F90F /* TeacherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37937572D1D431F00C0F90F /* TeacherViewController.swift */; };
+		C379375E2D1D431F00C0F90F /* EngineerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37937582D1D431F00C0F90F /* EngineerViewController.swift */; };
+		C379375F2D1D431F00C0F90F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37937592D1D431F00C0F90F /* Main.storyboard */; };
+		C37937602D1D431F00C0F90F /* ChefViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C379375A2D1D431F00C0F90F /* ChefViewController.swift */; };
 		C3A8360F2CFC6BF200A1AFB2 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = C3A8360E2CFC6BF200A1AFB2 /* FirebaseCore */; };
 		C3A836112CFC6C0200A1AFB2 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = C3A836102CFC6C0200A1AFB2 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		C3A836132CFC6C0600A1AFB2 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C3A836122CFC6C0600A1AFB2 /* FirebaseAnalytics */; };
@@ -43,7 +49,6 @@
 		D43E51B52CF5EEE500916325 /* EmpProfileStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43E51B42CF5EEE500916325 /* EmpProfileStoryBoard.storyboard */; };
 		D43E51B72CF5EF0900916325 /* JobPostingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43E51B62CF5EF0900916325 /* JobPostingStoryboard.storyboard */; };
 		D43E51B92CF6064200916325 /* DashboardStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43E51B82CF6064200916325 /* DashboardStoryBoard.storyboard */; };
-		D43E51BF2CF614D900916325 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43E51BE2CF614D900916325 /* DashboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +81,12 @@
 		C345BACD2D0B3A8700205693 /* InterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
 		C345BAD32D0B403200205693 /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
 		C345BAD72D0B49F100205693 /* WorkEXPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkEXPViewController.swift; sourceTree = "<group>"; };
+		C37937552D1D431E00C0F90F /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardViewController.swift; path = "../../../Dashboard copy 5/Dashboard/DashboardViewController.swift"; sourceTree = "<group>"; };
+		C37937562D1D431E00C0F90F /* SoftwareEngineerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftwareEngineerViewController.swift; sourceTree = "<group>"; };
+		C37937572D1D431F00C0F90F /* TeacherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherViewController.swift; sourceTree = "<group>"; };
+		C37937582D1D431F00C0F90F /* EngineerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngineerViewController.swift; sourceTree = "<group>"; };
+		C37937592D1D431F00C0F90F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C379375A2D1D431F00C0F90F /* ChefViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChefViewController.swift; sourceTree = "<group>"; };
 		C3F131E92D0AF55600861187 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C3F131FF2D0B20A900861187 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		CF18169A2D097C8C00D0162A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -99,7 +110,6 @@
 		D43E51B42CF5EEE500916325 /* EmpProfileStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmpProfileStoryBoard.storyboard; sourceTree = "<group>"; };
 		D43E51B62CF5EF0900916325 /* JobPostingStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JobPostingStoryboard.storyboard; sourceTree = "<group>"; };
 		D43E51B82CF6064200916325 /* DashboardStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DashboardStoryBoard.storyboard; sourceTree = "<group>"; };
-		D43E51BE2CF614D900916325 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +181,12 @@
 				C311BCD52CFF3E980063F268 /* LoginViewController.swift */,
 				C311BCD32CFF3E0E0063F268 /* SignupViewController.swift */,
 				D43E51B82CF6064200916325 /* DashboardStoryBoard.storyboard */,
-				D43E51BE2CF614D900916325 /* DashboardViewController.swift */,
+				C379375A2D1D431F00C0F90F /* ChefViewController.swift */,
+				C37937552D1D431E00C0F90F /* DashboardViewController.swift */,
+				C37937582D1D431F00C0F90F /* EngineerViewController.swift */,
+				C37937592D1D431F00C0F90F /* Main.storyboard */,
+				C37937562D1D431E00C0F90F /* SoftwareEngineerViewController.swift */,
+				C37937572D1D431F00C0F90F /* TeacherViewController.swift */,
 				D43E51AC2CF5EE2000916325 /* CVtoolStoryboard.storyboard */,
 				AC146F3A2D0F30CD00081473 /* GeneratedCVViewController.swift */,
 				C345BACD2D0B3A8700205693 /* InterestsViewController.swift */,
@@ -335,6 +350,7 @@
 				D43E51822CF5EA3600916325 /* Main.storyboard in Resources */,
 				D43E51B12CF5EE4300916325 /* SettingsStoryBoard.storyboard in Resources */,
 				ACBA88E72D1D2C8000124CF9 /* EmpSettingsStoryBoard.storyboard in Resources */,
+				C379375F2D1D431F00C0F90F /* Main.storyboard in Resources */,
 				D43E51B92CF6064200916325 /* DashboardStoryBoard.storyboard in Resources */,
 				D43E51AD2CF5EE2000916325 /* CVtoolStoryboard.storyboard in Resources */,
 				ACCA97F92D1D1D68005C9A09 /* GoogleService-Info.plist in Resources */,
@@ -365,12 +381,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C311BCD62CFF3E980063F268 /* LoginViewController.swift in Sources */,
+				C379375B2D1D431F00C0F90F /* DashboardViewController.swift in Sources */,
 				C311BCD42CFF3E0E0063F268 /* SignupViewController.swift in Sources */,
 				AC8559572D0F227B002DD57D /* GradientView.swift in Sources */,
 				D43E517F2CF5EA3600916325 /* ViewController.swift in Sources */,
 				D43E517B2CF5EA3600916325 /* AppDelegate.swift in Sources */,
 				C345BACE2D0B3A8700205693 /* InterestsViewController.swift in Sources */,
-				D43E51BF2CF614D900916325 /* DashboardViewController.swift in Sources */,
+				C379375C2D1D431F00C0F90F /* SoftwareEngineerViewController.swift in Sources */,
+				C37937602D1D431F00C0F90F /* ChefViewController.swift in Sources */,
 				C345BACC2D0B351900205693 /* CVToolViewController.swift in Sources */,
 				AC146F3B2D0F30CD00081473 /* GeneratedCVViewController.swift in Sources */,
 				C345BAD42D0B403200205693 /* SkillsViewController.swift in Sources */,
@@ -379,7 +397,9 @@
 				C345BAD82D0B49F100205693 /* WorkEXPViewController.swift in Sources */,
 				D43E517D2CF5EA3600916325 /* SceneDelegate.swift in Sources */,
 				C3F131EA2D0AF55600861187 /* TabBarViewController.swift in Sources */,
+				C379375D2D1D431F00C0F90F /* TeacherViewController.swift in Sources */,
 				CF18169B2D097C8C00D0162A /* SettingsViewController.swift in Sources */,
+				C379375E2D1D431F00C0F90F /* EngineerViewController.swift in Sources */,
 				C3F132002D0B20A900861187 /* AboutMeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
