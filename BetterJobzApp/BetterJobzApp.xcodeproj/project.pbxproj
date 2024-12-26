@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7422A75F2D1D327A00C1AD23 /* ImagePickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7422A75D2D1D327A00C1AD23 /* ImagePickerDelegate.swift */; };
+		7422A7602D1D327A00C1AD23 /* ProfileViewController 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7422A75E2D1D327A00C1AD23 /* ProfileViewController 2.swift */; };
 		AC146F3B2D0F30CD00081473 /* GeneratedCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC146F3A2D0F30CD00081473 /* GeneratedCVViewController.swift */; };
 		AC8559572D0F227B002DD57D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8559562D0F227B002DD57D /* GradientView.swift */; };
 		ACBA88E72D1D2C8000124CF9 /* EmpSettingsStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBA88E62D1D2C8000124CF9 /* EmpSettingsStoryBoard.storyboard */; };
@@ -62,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7422A75D2D1D327A00C1AD23 /* ImagePickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerDelegate.swift; sourceTree = "<group>"; };
+		7422A75E2D1D327A00C1AD23 /* ProfileViewController 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController 2.swift"; sourceTree = "<group>"; };
 		AC146F3A2D0F30CD00081473 /* GeneratedCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedCVViewController.swift; sourceTree = "<group>"; };
 		AC8559562D0F227B002DD57D /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		ACBA88E62D1D2C8000124CF9 /* EmpSettingsStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EmpSettingsStoryBoard.storyboard; sourceTree = "<group>"; };
@@ -177,6 +181,8 @@
 				C345BACB2D0B351900205693 /* CVToolViewController.swift */,
 				C3F131E92D0AF55600861187 /* TabBarViewController.swift */,
 				D43E51AE2CF5EE2F00916325 /* ProfileStoryBoard.storyboard */,
+				7422A75D2D1D327A00C1AD23 /* ImagePickerDelegate.swift */,
+				7422A75E2D1D327A00C1AD23 /* ProfileViewController 2.swift */,
 				D43E51B02CF5EE4300916325 /* SettingsStoryBoard.storyboard */,
 				ACBA88E62D1D2C8000124CF9 /* EmpSettingsStoryBoard.storyboard */,
 				CF18169A2D097C8C00D0162A /* SettingsViewController.swift */,
@@ -368,6 +374,8 @@
 				C345BACC2D0B351900205693 /* CVToolViewController.swift in Sources */,
 				AC146F3B2D0F30CD00081473 /* GeneratedCVViewController.swift in Sources */,
 				C345BAD42D0B403200205693 /* SkillsViewController.swift in Sources */,
+				7422A75F2D1D327A00C1AD23 /* ImagePickerDelegate.swift in Sources */,
+				7422A7602D1D327A00C1AD23 /* ProfileViewController 2.swift in Sources */,
 				C345BAD82D0B49F100205693 /* WorkEXPViewController.swift in Sources */,
 				D43E517D2CF5EA3600916325 /* SceneDelegate.swift in Sources */,
 				C3F131EA2D0AF55600861187 /* TabBarViewController.swift in Sources */,
