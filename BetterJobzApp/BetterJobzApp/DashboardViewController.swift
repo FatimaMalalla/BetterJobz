@@ -13,7 +13,25 @@ class DashboardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Handle passed data or setup here
-        print("Logged in user: \(username ?? "Unknown User")")
+
+        // Do any additional setup after loading the view.
     }
+    
+
+    @IBAction func jobApplicationStatusButtonTapped(_ sender: Any) {
+        let userDefaults = UserDefaults.standard
+        if let lastAppliedPage = userDefaults.string(forKey: "lastAppliedPage") {
+            performSegue(withIdentifier: lastAppliedPage, sender: self)
+        } else {
+            let alert = UIAlertController(
+                title: "No Applications Found",
+                message: "You have not applied for any job yet.",
+                preferredStyle: .alert
+            )
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+    }
+    
+
 }
