@@ -19,14 +19,12 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XV6-OU-Gba">
                                 <rect key="frame" x="16" y="103" width="361" height="695"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WeC-jT-QDR">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZQ-ZM-5pd">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="225"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Articles">
-                                            <color key="baseBackgroundColor" red="0.10118357090000001" green="0.16236901279999999" blue="0.3020078242" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </buttonConfiguration>
+                                        <buttonConfiguration key="configuration" style="filled" title="Articles"/>
                                         <connections>
-                                            <segue destination="qPL-Ya-JTD" kind="show" id="dkl-vO-AQj"/>
+                                            <segue destination="qPL-Ya-JTD" kind="show" id="8N4-U4-DD4"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAw-hg-vv8">
@@ -71,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ary-ON-q4Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1993.1297709923663" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1065" y="19"/>
         </scene>
         <!--Tutorials-->
         <scene sceneID="rzo-au-ieR">
@@ -192,21 +190,8 @@
                                     <segue destination="pxI-Yb-LkX" kind="show" id="wAI-4y-XZL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfL-gO-b4J">
-                                <rect key="frame" x="20" y="424" width="357" height="238"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled"/>
-                                <connections>
-                                    <action selector="secondArticle:" destination="qPL-Ya-JTD" eventType="touchUpInside" id="cmf-fM-EFi"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Articles1" translatesAutoresizingMaskIntoConstraints="NO" id="H1m-NC-yzx">
                                 <rect key="frame" x="33" y="177" width="278" height="158"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Articles2" translatesAutoresizingMaskIntoConstraints="NO" id="u3Z-FE-D0X">
-                                <rect key="frame" x="43" y="442" width="259" height="151"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Work Experience and Your Career: Importance, Levels and Tips" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0R-nJ-MOZ">
@@ -255,14 +240,55 @@
                                     <action selector="firstLikeButtonTapped:" destination="qPL-Ya-JTD" eventType="touchUpInside" id="9nz-z7-Ud1"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Tips to describe your work experience on your resume" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obN-fM-G3s">
-                                <rect key="frame" x="52" y="601" width="240" height="59"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7o-ZH-PAw">
+                                <rect key="frame" x="20" y="425" width="352" height="232"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled"/>
+                                <connections>
+                                    <action selector="secondArticleTapped:" destination="qPL-Ya-JTD" eventType="touchUpInside" id="65o-0y-6PY"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Tips to describe your work experience on your resume" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gA-e6-EQp">
+                                <rect key="frame" x="52" y="603" width="274" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Articles2" translatesAutoresizingMaskIntoConstraints="NO" id="1V1-Yd-L9z">
+                                <rect key="frame" x="52" y="442" width="240" height="158"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kL2-RP-XCp">
+                                <rect key="frame" x="328" y="473" width="24" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcq-pR-bTQ">
+                                <rect key="frame" x="310" y="453" width="51" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="secondLikeButtonTapped:" destination="qPL-Ya-JTD" eventType="touchUpInside" id="r6h-Cq-AgX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyz-vE-OUU">
+                                <rect key="frame" x="312" y="497" width="47" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="bookmark" catalog="system">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="secondSaveButtonTapped:" destination="qPL-Ya-JTD" eventType="touchUpInside" id="LCY-Wn-LwB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HZo-Py-d0M"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -271,6 +297,8 @@
                     <connections>
                         <outlet property="firstLikeButton" destination="mqm-Ce-duP" id="11U-Lz-RqV"/>
                         <outlet property="firstSaveButton" destination="vWm-nh-KR2" id="YN1-Kd-r0R"/>
+                        <outlet property="secondLikeButton" destination="wcq-pR-bTQ" id="hQo-og-k3l"/>
+                        <outlet property="secondSaveButton" destination="cyz-vE-OUU" id="JAB-3G-zNb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MyE-q0-PJL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -579,7 +607,7 @@ tasks.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jF4-O1-h1q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1066.4122137404579" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1065" y="-708"/>
         </scene>
     </scenes>
     <resources>
