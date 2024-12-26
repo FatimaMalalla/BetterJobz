@@ -13,6 +13,13 @@
 		AC146F3B2D0F30CD00081473 /* GeneratedCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC146F3A2D0F30CD00081473 /* GeneratedCVViewController.swift */; };
 		AC8559572D0F227B002DD57D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8559562D0F227B002DD57D /* GradientView.swift */; };
 		ACBA88E72D1D2C8000124CF9 /* EmpSettingsStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBA88E62D1D2C8000124CF9 /* EmpSettingsStoryBoard.storyboard */; };
+		ACBFCBFE2D1D615200819FBD /* SkillStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBFCBFD2D1D615200819FBD /* SkillStoryboard.storyboard */; };
+		ACBFCC002D1D64EF00819FBD /* ArticleFirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFCBFF2D1D64EF00819FBD /* ArticleFirstPageViewController.swift */; };
+		ACBFCC022D1D666700819FBD /* ArticleSecondPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFCC012D1D666700819FBD /* ArticleSecondPageViewController.swift */; };
+		ACBFCC042D1D676500819FBD /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFCC032D1D676500819FBD /* VideoViewController.swift */; };
+		ACBFCC062D1D681400819FBD /* TutorialFirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFCC052D1D681400819FBD /* TutorialFirstPageViewController.swift */; };
+		ACBFCC082D1D699F00819FBD /* TutorialSecondPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFCC072D1D699F00819FBD /* TutorialSecondPageViewController.swift */; };
+		ACBFCC0A2D1D784F00819FBD /* ButtonsSkillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFCC092D1D784F00819FBD /* ButtonsSkillViewController.swift */; };
 		ACCA97F92D1D1D68005C9A09 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACCA97F82D1D1D68005C9A09 /* GoogleService-Info.plist */; };
 		C311BCD22CFF3C470063F268 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = C311BCD12CFF3C470063F268 /* FirebaseDatabase */; };
 		C311BCD42CFF3E0E0063F268 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C311BCD32CFF3E0E0063F268 /* SignupViewController.swift */; };
@@ -71,6 +78,14 @@
 		AC146F3A2D0F30CD00081473 /* GeneratedCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedCVViewController.swift; sourceTree = "<group>"; };
 		AC8559562D0F227B002DD57D /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		ACBA88E62D1D2C8000124CF9 /* EmpSettingsStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EmpSettingsStoryBoard.storyboard; sourceTree = "<group>"; };
+		ACBFCBFC2D1D60AD00819FBD /* SkillDevelopmentStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SkillDevelopmentStoryBoard.storyboard; sourceTree = "<group>"; };
+		ACBFCBFD2D1D615200819FBD /* SkillStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SkillStoryboard.storyboard; sourceTree = "<group>"; };
+		ACBFCBFF2D1D64EF00819FBD /* ArticleFirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleFirstPageViewController.swift; sourceTree = "<group>"; };
+		ACBFCC012D1D666700819FBD /* ArticleSecondPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleSecondPageViewController.swift; sourceTree = "<group>"; };
+		ACBFCC032D1D676500819FBD /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		ACBFCC052D1D681400819FBD /* TutorialFirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialFirstPageViewController.swift; sourceTree = "<group>"; };
+		ACBFCC072D1D699F00819FBD /* TutorialSecondPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialSecondPageViewController.swift; sourceTree = "<group>"; };
+		ACBFCC092D1D784F00819FBD /* ButtonsSkillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsSkillViewController.swift; sourceTree = "<group>"; };
 		ACCA97F82D1D1D68005C9A09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C311BCD32CFF3E0E0063F268 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		C311BCD52CFF3E980063F268 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +189,14 @@
 				C311BCD52CFF3E980063F268 /* LoginViewController.swift */,
 				C311BCD32CFF3E0E0063F268 /* SignupViewController.swift */,
 				D43E51B82CF6064200916325 /* DashboardStoryBoard.storyboard */,
+				ACBFCBFD2D1D615200819FBD /* SkillStoryboard.storyboard */,
+				ACBFCC092D1D784F00819FBD /* ButtonsSkillViewController.swift */,
+				ACBFCC012D1D666700819FBD /* ArticleSecondPageViewController.swift */,
+				ACBFCC052D1D681400819FBD /* TutorialFirstPageViewController.swift */,
+				ACBFCC072D1D699F00819FBD /* TutorialSecondPageViewController.swift */,
+				ACBFCBFC2D1D60AD00819FBD /* SkillDevelopmentStoryBoard.storyboard */,
+				ACBFCBFF2D1D64EF00819FBD /* ArticleFirstPageViewController.swift */,
+				ACBFCC032D1D676500819FBD /* VideoViewController.swift */,
 				D43E51BE2CF614D900916325 /* DashboardViewController.swift */,
 				D43E51AC2CF5EE2000916325 /* CVtoolStoryboard.storyboard */,
 				AC146F3A2D0F30CD00081473 /* GeneratedCVViewController.swift */,
@@ -332,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D43E51872CF5EA3800916325 /* LaunchScreen.storyboard in Resources */,
+				ACBFCBFE2D1D615200819FBD /* SkillStoryboard.storyboard in Resources */,
 				D43E51842CF5EA3800916325 /* Assets.xcassets in Resources */,
 				D43E51B72CF5EF0900916325 /* JobPostingStoryboard.storyboard in Resources */,
 				D43E51B52CF5EEE500916325 /* EmpProfileStoryBoard.storyboard in Resources */,
@@ -371,19 +395,25 @@
 				C311BCD62CFF3E980063F268 /* LoginViewController.swift in Sources */,
 				C311BCD42CFF3E0E0063F268 /* SignupViewController.swift in Sources */,
 				AC8559572D0F227B002DD57D /* GradientView.swift in Sources */,
+				ACBFCC022D1D666700819FBD /* ArticleSecondPageViewController.swift in Sources */,
+				ACBFCC002D1D64EF00819FBD /* ArticleFirstPageViewController.swift in Sources */,
 				D43E517F2CF5EA3600916325 /* ViewController.swift in Sources */,
 				D43E517B2CF5EA3600916325 /* AppDelegate.swift in Sources */,
 				C345BACE2D0B3A8700205693 /* InterestsViewController.swift in Sources */,
 				D43E51BF2CF614D900916325 /* DashboardViewController.swift in Sources */,
+				ACBFCC0A2D1D784F00819FBD /* ButtonsSkillViewController.swift in Sources */,
 				C345BACC2D0B351900205693 /* CVToolViewController.swift in Sources */,
 				AC146F3B2D0F30CD00081473 /* GeneratedCVViewController.swift in Sources */,
 				C345BAD42D0B403200205693 /* SkillsViewController.swift in Sources */,
+				ACBFCC062D1D681400819FBD /* TutorialFirstPageViewController.swift in Sources */,
 				7422A75F2D1D327A00C1AD23 /* ImagePickerDelegate.swift in Sources */,
 				7422A7602D1D327A00C1AD23 /* ProfileViewController 2.swift in Sources */,
 				C345BAD82D0B49F100205693 /* WorkEXPViewController.swift in Sources */,
 				D43E517D2CF5EA3600916325 /* SceneDelegate.swift in Sources */,
+				ACBFCC082D1D699F00819FBD /* TutorialSecondPageViewController.swift in Sources */,
 				C3F131EA2D0AF55600861187 /* TabBarViewController.swift in Sources */,
 				CF18169B2D097C8C00D0162A /* SettingsViewController.swift in Sources */,
+				ACBFCC042D1D676500819FBD /* VideoViewController.swift in Sources */,
 				C3F132002D0B20A900861187 /* AboutMeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
