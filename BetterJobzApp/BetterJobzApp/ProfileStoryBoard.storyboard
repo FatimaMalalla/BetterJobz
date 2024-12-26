@@ -75,7 +75,7 @@
             </objects>
             <point key="canvasLocation" x="5110.6870229007627" y="724.64788732394368"/>
         </scene>
-        <!--Item-->
+        <!--Profile View Controller-->
         <scene sceneID="f3b-W4-oif">
             <objects>
                 <tableViewController storyboardIdentifier="Profile_Ref" id="jPh-F7-hSI" customClass="ProfileViewController" customModule="BetterJobzApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -408,7 +408,7 @@
                             <outlet property="delegate" destination="jPh-F7-hSI" id="Rme-wc-KLf"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="E53-ty-dVJ"/>
+                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" selectedImage="person.fill" id="E53-ty-dVJ"/>
                     <navigationItem key="navigationItem" id="3cA-zI-pwz"/>
                     <connections>
                         <outlet property="editButton" destination="sO6-78-1vC" id="649-46-Xfd"/>
