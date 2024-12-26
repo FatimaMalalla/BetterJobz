@@ -162,7 +162,7 @@ If you have questions or concerns regarding this Privacy Policy, please contact 
         <!--Settings View Controller-->
         <scene sceneID="imb-1q-yrs">
             <objects>
-                <viewController storyboardIdentifier="Settings_REF" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gul-SC-qgy" customClass="SettingsViewController" customModule="BetterJobzApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EmpSettings_REF" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gul-SC-qgy" customClass="SettingsViewController" customModule="BetterJobzApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="45R-a3-TEE">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

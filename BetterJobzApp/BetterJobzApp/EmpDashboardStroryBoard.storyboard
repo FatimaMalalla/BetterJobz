@@ -4,41 +4,345 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
-        <scene sceneID="s0d-6b-0kx">
-            <objects>
-                <viewController storyboardIdentifier="EMP_Dashboard" id="Y6W-OH-hqX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" red="0.71812564810526736" green="0.39566350096328656" blue="0.65624205768724764" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Szg-Hn-6Fl"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="985.49618320610682" y="3.5211267605633805"/>
-        </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="0b9-wx-WD2">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="MFR-vi-U2V" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="MFR-vi-U2V" customClass="TabBarViewController" customModule="BetterJobzApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TKV-Dr-1i0">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" red="0.1453614533" green="0.23530036209999999" blue="0.41938996319999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </tabBarAppearance>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="viewControllers" id="FCf-US-MBr"/>
+                        <segue destination="ubW-pY-mEO" kind="relationship" relationship="viewControllers" id="efH-A1-ovO"/>
+                        <segue destination="YDf-sb-97o" kind="relationship" relationship="viewControllers" id="AHI-bL-oaO"/>
+                        <segue destination="cIC-vN-VAf" kind="relationship" relationship="viewControllers" id="uO6-p0-emC"/>
+                        <segue destination="E10-38-slp" kind="relationship" relationship="viewControllers" id="WbS-eK-t11"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UwY-oz-isz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="58.778625954198468" y="3.5211267605633805"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="k5B-cX-Lfz">
+            <objects>
+                <viewController id="ubW-pY-mEO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="46i-8A-npR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="6Ub-OG-6rQ">
+                                <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFL-vJ-f1L">
+                                <rect key="frame" x="0.0" y="115" width="393" height="737"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xts-BY-Qq5">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="827"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="yF9-DX-zel">
+                                                <rect key="frame" x="16" y="0.0" width="361" height="763"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="TopLeft" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfG-6P-GDZ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="361" height="66"/>
+                                                        <color key="backgroundColor" red="0.62745100259999997" green="0.1607843041" blue="0.38823530080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="66" id="lsv-Oa-qzs"/>
+                                                        </constraints>
+                                                        <color key="tintColor" red="0.62745100259999997" green="0.1607843041" blue="0.38823530080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Job Application Status" cornerStyle="dynamic">
+                                                            <directionalEdgeInsets key="contentInsets" top="8" leading="11" bottom="20" trailing="20"/>
+                                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FN0-6F-zUd">
+                                                        <rect key="frame" x="0.0" y="72" width="361" height="66"/>
+                                                        <color key="backgroundColor" red="0.62745100259999997" green="0.1607843041" blue="0.38823530080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="66" id="Tdx-CL-6ca"/>
+                                                        </constraints>
+                                                        <color key="tintColor" red="0.62745100259999997" green="0.1647058874" blue="0.39215683940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button" image="arrow.right" catalog="system"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Skill Development">
+                                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgC-jv-LDc">
+                                                        <rect key="frame" x="0.0" y="144" width="361" height="27.666666666666657"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Job Posts">
+                                                                <attributes>
+                                                                    <font key="NSFont" metaFont="system" size="23"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZfH-I9-pXu">
+                                                        <rect key="frame" x="0.0" y="177.66666666666669" width="361" height="141.33333333333331"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SoftwareJob" translatesAutoresizingMaskIntoConstraints="NO" id="B8M-JZ-Paf">
+                                                                <rect key="frame" x="180" y="0.0" width="181" height="142"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Software Engineer Job Available" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wc-87-Mwe">
+                                                                <rect key="frame" x="8" y="38" width="145" height="49"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAe-WF-5Ls">
+                                                                <rect key="frame" x="48" y="95" width="85" height="29"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="Apply">
+                                                                    <color key="baseForegroundColor" red="0.62745100259999997" green="0.1647058874" blue="0.38823530080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.62745100259999997" green="0.1647058874" blue="0.38823530080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="tintColor" red="0.62745100259999997" green="0.1647058874" blue="0.39215683940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C33-3o-cF9">
+                                                        <rect key="frame" x="0.0" y="325" width="361" height="142"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="engineerjob" translatesAutoresizingMaskIntoConstraints="NO" id="eRM-AT-162">
+                                                                <rect key="frame" x="131" y="-14" width="240" height="171"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13d-Sx-W67">
+                                                                <rect key="frame" x="8" y="33" width="123" height="49"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <string key="text">Engineer 
+Job Available</string>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asl-ex-ioy">
+                                                                <rect key="frame" x="46" y="91" width="85" height="29"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="Apply">
+                                                                    <color key="baseForegroundColor" red="0.62745100259999997" green="0.1647058874" blue="0.39215683940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.62745100259999997" green="0.1647058874" blue="0.39215683940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="tintColor" red="0.62745100259999997" green="0.1647058874" blue="0.39215683940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Wr-wI-ODT">
+                                                        <rect key="frame" x="0.0" y="473" width="361" height="142"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7f-Bb-uUw">
+                                                                <rect key="frame" x="8" y="39" width="123" height="49"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <string key="text">Teacher 
+Job Available</string>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="teacherJob" translatesAutoresizingMaskIntoConstraints="NO" id="W7Z-MW-7ih">
+                                                                <rect key="frame" x="169" y="-2" width="184" height="148"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            </imageView>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNX-zr-D0a">
+                                                                <rect key="frame" x="46" y="93" width="85" height="29"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="Apply">
+                                                                    <color key="baseForegroundColor" red="0.62745100259999997" green="0.1607843041" blue="0.38823530080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.62745100259999997" green="0.1607843041" blue="0.38823530080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="tintColor" red="0.62745100259999997" green="0.1647058874" blue="0.39215683940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Etg-UL-siA">
+                                                        <rect key="frame" x="0.0" y="621" width="361" height="142"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udc-tW-ifP">
+                                                                <rect key="frame" x="8" y="38" width="123" height="49"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <string key="text">Chef 
+Job Available</string>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXw-2q-Kwm">
+                                                                <rect key="frame" x="46" y="91" width="85" height="29"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="Apply">
+                                                                    <color key="baseForegroundColor" red="0.62745100259999997" green="0.1607843041" blue="0.38823530080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ChefJob" translatesAutoresizingMaskIntoConstraints="NO" id="SYD-aA-iyh">
+                                                                <rect key="frame" x="168" y="0.0" width="193" height="142"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.62745100259999997" green="0.1647058874" blue="0.39215683940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="tintColor" red="0.62745100259999997" green="0.1647058874" blue="0.39215683940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="qfG-6P-GDZ" firstAttribute="leading" secondItem="yF9-DX-zel" secondAttribute="leading" id="1Qo-yP-WLt"/>
+                                                    <constraint firstItem="FN0-6F-zUd" firstAttribute="leading" secondItem="yF9-DX-zel" secondAttribute="leading" id="1ff-Yo-MuG"/>
+                                                    <constraint firstAttribute="trailing" secondItem="FN0-6F-zUd" secondAttribute="trailing" id="5ya-hx-XyN"/>
+                                                    <constraint firstItem="C33-3o-cF9" firstAttribute="top" secondItem="yF9-DX-zel" secondAttribute="top" constant="325" id="8Ni-d3-qrG"/>
+                                                    <constraint firstAttribute="trailing" secondItem="qfG-6P-GDZ" secondAttribute="trailing" id="AYh-wb-KMy"/>
+                                                    <constraint firstItem="7Wr-wI-ODT" firstAttribute="top" secondItem="yF9-DX-zel" secondAttribute="top" constant="473" id="C1R-sA-T3T"/>
+                                                    <constraint firstItem="qfG-6P-GDZ" firstAttribute="top" secondItem="yF9-DX-zel" secondAttribute="top" id="C6c-tQ-XXX"/>
+                                                    <constraint firstItem="Etg-UL-siA" firstAttribute="top" secondItem="yF9-DX-zel" secondAttribute="top" constant="621" id="gD0-5W-Fgp"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="827" id="1qf-op-8br"/>
+                                            <constraint firstItem="yF9-DX-zel" firstAttribute="leading" secondItem="Xts-BY-Qq5" secondAttribute="leading" constant="16" id="Sva-Z3-wre"/>
+                                            <constraint firstItem="yF9-DX-zel" firstAttribute="top" secondItem="Xts-BY-Qq5" secondAttribute="top" id="jpT-WT-crE"/>
+                                            <constraint firstItem="yF9-DX-zel" firstAttribute="centerX" secondItem="Xts-BY-Qq5" secondAttribute="centerX" id="rUf-iq-z96"/>
+                                            <constraint firstAttribute="bottom" secondItem="yF9-DX-zel" secondAttribute="bottom" constant="64" id="xPi-Xz-Qn2"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Xts-BY-Qq5" secondAttribute="trailing" id="599-Ug-h9U"/>
+                                    <constraint firstItem="Xts-BY-Qq5" firstAttribute="top" secondItem="IFL-vJ-f1L" secondAttribute="top" id="CFO-YT-F15"/>
+                                    <constraint firstItem="Xts-BY-Qq5" firstAttribute="leading" secondItem="IFL-vJ-f1L" secondAttribute="leading" id="XvZ-wx-41R"/>
+                                    <constraint firstItem="Xts-BY-Qq5" firstAttribute="centerX" secondItem="IFL-vJ-f1L" secondAttribute="centerX" id="cqA-lm-tVG"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xts-BY-Qq5" secondAttribute="bottom" constant="32" id="erE-Er-ptX"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DbJ-vp-rR0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Ub-OG-6rQ" firstAttribute="leading" secondItem="IFL-vJ-f1L" secondAttribute="leading" id="2C6-Ag-xIM"/>
+                            <constraint firstAttribute="bottom" secondItem="IFL-vJ-f1L" secondAttribute="bottom" id="NRQ-OC-UnE"/>
+                            <constraint firstItem="6Ub-OG-6rQ" firstAttribute="trailing" secondItem="IFL-vJ-f1L" secondAttribute="trailing" id="QfA-8c-3TU"/>
+                            <constraint firstItem="IFL-vJ-f1L" firstAttribute="top" secondItem="6Ub-OG-6rQ" secondAttribute="bottom" id="e63-no-bIZ"/>
+                            <constraint firstItem="IFL-vJ-f1L" firstAttribute="leading" secondItem="DbJ-vp-rR0" secondAttribute="leading" id="pcR-3a-FXs"/>
+                            <constraint firstItem="6Ub-OG-6rQ" firstAttribute="top" secondItem="DbJ-vp-rR0" secondAttribute="top" id="qa7-S7-Ikq"/>
+                            <constraint firstItem="IFL-vJ-f1L" firstAttribute="trailing" secondItem="DbJ-vp-rR0" secondAttribute="trailing" id="u2Y-YJ-WKf"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="house.fill" catalog="system" selectedImage="house.fill" id="hDg-i1-emm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b3Q-RK-Rcf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1204" y="4"/>
+        </scene>
+        <!--EmpDashboardStroryBoard-->
+        <scene sceneID="xcM-uL-og9">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="EmpSettings_REF" storyboardName="EmpDashboardStroryBoard" id="E10-38-slp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Hfe-un-qkh"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="saC-E5-kgD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-938" y="492"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="UBZ-wp-OdO">
+            <objects>
+                <viewController id="cIC-vN-VAf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D5Y-WR-q02">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="p5H-3A-7Gq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" selectedImage="person.fill" id="mpG-ei-PII"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qPa-kN-HpZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="59" y="765"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Yix-ek-RsT">
+            <objects>
+                <viewController id="YDf-sb-97o" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X1L-zH-7Qz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="tYJ-zr-uXA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="plus" catalog="system" selectedImage="plus" id="sAl-1y-1m7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yis-yr-A5d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1204" y="765"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="ChefJob" width="310" height="218"/>
+        <image name="SoftwareJob" width="352" height="279"/>
+        <image name="arrow.right" catalog="system" width="128" height="95"/>
+        <image name="engineerjob" width="430" height="242"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="teacherJob" width="334" height="248"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
