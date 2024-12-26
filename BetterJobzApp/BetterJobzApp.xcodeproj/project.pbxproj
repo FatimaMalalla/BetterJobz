@@ -32,6 +32,7 @@
 		C345BACE2D0B3A8700205693 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C345BACD2D0B3A8700205693 /* InterestsViewController.swift */; };
 		C345BAD42D0B403200205693 /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C345BAD32D0B403200205693 /* SkillsViewController.swift */; };
 		C345BAD82D0B49F100205693 /* WorkEXPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C345BAD72D0B49F100205693 /* WorkEXPViewController.swift */; };
+		C34A273B2D1DC5ED00AF472F /* BaseArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34A273A2D1DC5ED00AF472F /* BaseArticleViewController.swift */; };
 		C3A8360F2CFC6BF200A1AFB2 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = C3A8360E2CFC6BF200A1AFB2 /* FirebaseCore */; };
 		C3A836112CFC6C0200A1AFB2 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = C3A836102CFC6C0200A1AFB2 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		C3A836132CFC6C0600A1AFB2 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C3A836122CFC6C0600A1AFB2 /* FirebaseAnalytics */; };
@@ -101,6 +102,7 @@
 		C345BACD2D0B3A8700205693 /* InterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
 		C345BAD32D0B403200205693 /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
 		C345BAD72D0B49F100205693 /* WorkEXPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkEXPViewController.swift; sourceTree = "<group>"; };
+		C34A273A2D1DC5ED00AF472F /* BaseArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseArticleViewController.swift; sourceTree = "<group>"; };
 		C3F131E92D0AF55600861187 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C3F131FF2D0B20A900861187 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		CF18169A2D097C8C00D0162A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				AC98437D2D1D91610085C628 /* TeacherViewController.swift */,
 				ACBFCBFD2D1D615200819FBD /* SkillStoryboard.storyboard */,
 				ACBFCC092D1D784F00819FBD /* ButtonsSkillViewController.swift */,
+				C34A273A2D1DC5ED00AF472F /* BaseArticleViewController.swift */,
 				ACBFCC012D1D666700819FBD /* ArticleSecondPageViewController.swift */,
 				ACBFCC052D1D681400819FBD /* TutorialFirstPageViewController.swift */,
 				ACBFCC072D1D699F00819FBD /* TutorialSecondPageViewController.swift */,
@@ -404,6 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C34A273B2D1DC5ED00AF472F /* BaseArticleViewController.swift in Sources */,
 				C311BCD62CFF3E980063F268 /* LoginViewController.swift in Sources */,
 				C311BCD42CFF3E0E0063F268 /* SignupViewController.swift in Sources */,
 				AC8559572D0F227B002DD57D /* GradientView.swift in Sources */,
