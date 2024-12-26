@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Dashboard View Controller-->
         <scene sceneID="ybb-xI-M3a">
             <objects>
                 <viewController storyboardIdentifier="Dash" id="K2s-Fe-mK5" customClass="DashboardViewController" customModule="BetterJobzApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -266,7 +266,7 @@ Job Available</string>
                             <constraint firstAttribute="bottom" secondItem="7fE-ge-lZh" secondAttribute="bottom" id="tLy-jm-jVE"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="O03-p7-yHf"/>
+                    <tabBarItem key="tabBarItem" title="" image="house.fill" catalog="system" selectedImage="house.fill" id="O03-p7-yHf"/>
                     <navigationItem key="navigationItem" style="browser" id="HEM-RL-T0V"/>
                     <connections>
                         <segue destination="FGf-fX-cWD" kind="show" identifier="SoftwareEngineerStatusSegue" id="R8e-2b-pkH"/>
@@ -4902,10 +4902,10 @@ goldenspoon.jobs@gmail.com
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZkD-nc-vUq"/>
-        <segue reference="Fgg-Co-Kd5"/>
-        <segue reference="ZT0-u9-vNf"/>
-        <segue reference="par-44-gLj"/>
+        <segue reference="bDF-1d-1ko"/>
+        <segue reference="R8e-2b-pkH"/>
+        <segue reference="jGJ-ua-wTf"/>
+        <segue reference="y8Q-dV-3yr"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
@@ -4915,6 +4915,7 @@ goldenspoon.jobs@gmail.com
         <image name="arrow.right" catalog="system" width="128" height="95"/>
         <image name="engineerJob 1" width="800" height="800"/>
         <image name="engineerjob" width="430" height="242"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="teacherJob" width="334" height="248"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
