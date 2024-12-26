@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F991F962D1D422F0067D923 /* JobApplication folder in Resources */ = {isa = PBXBuildFile; fileRef = 3F991F952D1D422F0067D923 /* JobApplication folder */; };
 		7422A75F2D1D327A00C1AD23 /* ImagePickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7422A75D2D1D327A00C1AD23 /* ImagePickerDelegate.swift */; };
 		7422A7602D1D327A00C1AD23 /* ProfileViewController 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7422A75E2D1D327A00C1AD23 /* ProfileViewController 2.swift */; };
 		AC146F3B2D0F30CD00081473 /* GeneratedCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC146F3A2D0F30CD00081473 /* GeneratedCVViewController.swift */; };
@@ -64,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F991F952D1D422F0067D923 /* JobApplication folder */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "JobApplication folder"; sourceTree = "<group>"; };
 		7422A75D2D1D327A00C1AD23 /* ImagePickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerDelegate.swift; sourceTree = "<group>"; };
 		7422A75E2D1D327A00C1AD23 /* ProfileViewController 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController 2.swift"; sourceTree = "<group>"; };
 		AC146F3A2D0F30CD00081473 /* GeneratedCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedCVViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 		D43E51792CF5EA3600916325 /* BetterJobzApp */ = {
 			isa = PBXGroup;
 			children = (
+				3F991F952D1D422F0067D923 /* JobApplication folder */,
 				D43E517A2CF5EA3600916325 /* AppDelegate.swift */,
 				D43E517C2CF5EA3600916325 /* SceneDelegate.swift */,
 				D43E517E2CF5EA3600916325 /* ViewController.swift */,
@@ -339,6 +342,7 @@
 				D43E51AD2CF5EE2000916325 /* CVtoolStoryboard.storyboard in Resources */,
 				ACCA97F92D1D1D68005C9A09 /* GoogleService-Info.plist in Resources */,
 				D43E51B32CF5EEC800916325 /* EmpDashboardStroryBoard.storyboard in Resources */,
+				3F991F962D1D422F0067D923 /* JobApplication folder in Resources */,
 				D43E51AF2CF5EE2F00916325 /* ProfileStoryBoard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
