@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F991F962D1D422F0067D923 /* JobApplication folder in Resources */ = {isa = PBXBuildFile; fileRef = 3F991F952D1D422F0067D923 /* JobApplication folder */; };
+		529AFE7C2D1D98980018236C /* jobpost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 529AFE7B2D1D98980018236C /* jobpost.storyboard */; };
 		7422A75F2D1D327A00C1AD23 /* ImagePickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7422A75D2D1D327A00C1AD23 /* ImagePickerDelegate.swift */; };
 		7422A7602D1D327A00C1AD23 /* ProfileViewController 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7422A75E2D1D327A00C1AD23 /* ProfileViewController 2.swift */; };
 		AC146F3B2D0F30CD00081473 /* GeneratedCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC146F3A2D0F30CD00081473 /* GeneratedCVViewController.swift */; };
@@ -77,6 +78,7 @@
 
 /* Begin PBXFileReference section */
 		3F991F952D1D422F0067D923 /* JobApplication folder */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "JobApplication folder"; sourceTree = "<group>"; };
+		529AFE7B2D1D98980018236C /* jobpost.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = jobpost.storyboard; sourceTree = "<group>"; };
 		7422A75D2D1D327A00C1AD23 /* ImagePickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerDelegate.swift; sourceTree = "<group>"; };
 		7422A75E2D1D327A00C1AD23 /* ProfileViewController 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController 2.swift"; sourceTree = "<group>"; };
 		AC146F3A2D0F30CD00081473 /* GeneratedCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedCVViewController.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				AC8559562D0F227B002DD57D /* GradientView.swift */,
 				D43E51882CF5EA3800916325 /* Info.plist */,
 				ACCA97F82D1D1D68005C9A09 /* GoogleService-Info.plist */,
+				529AFE7B2D1D98980018236C /* jobpost.storyboard */,
 			);
 			path = BetterJobzApp;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				529AFE7C2D1D98980018236C /* jobpost.storyboard in Resources */,
 				D43E51872CF5EA3800916325 /* LaunchScreen.storyboard in Resources */,
 				ACBFCBFE2D1D615200819FBD /* SkillStoryboard.storyboard in Resources */,
 				D43E51842CF5EA3800916325 /* Assets.xcassets in Resources */,
