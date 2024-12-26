@@ -12,6 +12,10 @@
 		7422A7602D1D327A00C1AD23 /* ProfileViewController 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7422A75E2D1D327A00C1AD23 /* ProfileViewController 2.swift */; };
 		AC146F3B2D0F30CD00081473 /* GeneratedCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC146F3A2D0F30CD00081473 /* GeneratedCVViewController.swift */; };
 		AC8559572D0F227B002DD57D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8559562D0F227B002DD57D /* GradientView.swift */; };
+		AC98437A2D1D91170085C628 /* ChefViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9843792D1D91170085C628 /* ChefViewController.swift */; };
+		AC98437C2D1D91460085C628 /* SoftwareEngineerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC98437B2D1D91460085C628 /* SoftwareEngineerViewController.swift */; };
+		AC98437E2D1D91610085C628 /* TeacherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC98437D2D1D91610085C628 /* TeacherViewController.swift */; };
+		AC9843802D1D919B0085C628 /* EngineerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC98437F2D1D919B0085C628 /* EngineerViewController.swift */; };
 		ACBA88E72D1D2C8000124CF9 /* EmpSettingsStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBA88E62D1D2C8000124CF9 /* EmpSettingsStoryBoard.storyboard */; };
 		ACBFCBFE2D1D615200819FBD /* SkillStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBFCBFD2D1D615200819FBD /* SkillStoryboard.storyboard */; };
 		ACBFCC002D1D64EF00819FBD /* ArticleFirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBFCBFF2D1D64EF00819FBD /* ArticleFirstPageViewController.swift */; };
@@ -77,6 +81,10 @@
 		7422A75E2D1D327A00C1AD23 /* ProfileViewController 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController 2.swift"; sourceTree = "<group>"; };
 		AC146F3A2D0F30CD00081473 /* GeneratedCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedCVViewController.swift; sourceTree = "<group>"; };
 		AC8559562D0F227B002DD57D /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		AC9843792D1D91170085C628 /* ChefViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefViewController.swift; sourceTree = "<group>"; };
+		AC98437B2D1D91460085C628 /* SoftwareEngineerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftwareEngineerViewController.swift; sourceTree = "<group>"; };
+		AC98437D2D1D91610085C628 /* TeacherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherViewController.swift; sourceTree = "<group>"; };
+		AC98437F2D1D919B0085C628 /* EngineerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineerViewController.swift; sourceTree = "<group>"; };
 		ACBA88E62D1D2C8000124CF9 /* EmpSettingsStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EmpSettingsStoryBoard.storyboard; sourceTree = "<group>"; };
 		ACBFCBFC2D1D60AD00819FBD /* SkillDevelopmentStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SkillDevelopmentStoryBoard.storyboard; sourceTree = "<group>"; };
 		ACBFCBFD2D1D615200819FBD /* SkillStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SkillStoryboard.storyboard; sourceTree = "<group>"; };
@@ -189,6 +197,10 @@
 				C311BCD52CFF3E980063F268 /* LoginViewController.swift */,
 				C311BCD32CFF3E0E0063F268 /* SignupViewController.swift */,
 				D43E51B82CF6064200916325 /* DashboardStoryBoard.storyboard */,
+				AC9843792D1D91170085C628 /* ChefViewController.swift */,
+				AC98437F2D1D919B0085C628 /* EngineerViewController.swift */,
+				AC98437B2D1D91460085C628 /* SoftwareEngineerViewController.swift */,
+				AC98437D2D1D91610085C628 /* TeacherViewController.swift */,
 				ACBFCBFD2D1D615200819FBD /* SkillStoryboard.storyboard */,
 				ACBFCC092D1D784F00819FBD /* ButtonsSkillViewController.swift */,
 				ACBFCC012D1D666700819FBD /* ArticleSecondPageViewController.swift */,
@@ -399,6 +411,7 @@
 				ACBFCC002D1D64EF00819FBD /* ArticleFirstPageViewController.swift in Sources */,
 				D43E517F2CF5EA3600916325 /* ViewController.swift in Sources */,
 				D43E517B2CF5EA3600916325 /* AppDelegate.swift in Sources */,
+				AC9843802D1D919B0085C628 /* EngineerViewController.swift in Sources */,
 				C345BACE2D0B3A8700205693 /* InterestsViewController.swift in Sources */,
 				D43E51BF2CF614D900916325 /* DashboardViewController.swift in Sources */,
 				ACBFCC0A2D1D784F00819FBD /* ButtonsSkillViewController.swift in Sources */,
@@ -408,13 +421,16 @@
 				ACBFCC062D1D681400819FBD /* TutorialFirstPageViewController.swift in Sources */,
 				7422A75F2D1D327A00C1AD23 /* ImagePickerDelegate.swift in Sources */,
 				7422A7602D1D327A00C1AD23 /* ProfileViewController 2.swift in Sources */,
+				AC98437A2D1D91170085C628 /* ChefViewController.swift in Sources */,
 				C345BAD82D0B49F100205693 /* WorkEXPViewController.swift in Sources */,
 				D43E517D2CF5EA3600916325 /* SceneDelegate.swift in Sources */,
+				AC98437C2D1D91460085C628 /* SoftwareEngineerViewController.swift in Sources */,
 				ACBFCC082D1D699F00819FBD /* TutorialSecondPageViewController.swift in Sources */,
 				C3F131EA2D0AF55600861187 /* TabBarViewController.swift in Sources */,
 				CF18169B2D097C8C00D0162A /* SettingsViewController.swift in Sources */,
 				ACBFCC042D1D676500819FBD /* VideoViewController.swift in Sources */,
 				C3F132002D0B20A900861187 /* AboutMeViewController.swift in Sources */,
+				AC98437E2D1D91610085C628 /* TeacherViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
