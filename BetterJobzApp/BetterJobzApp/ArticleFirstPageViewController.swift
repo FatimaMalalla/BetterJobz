@@ -5,100 +5,130 @@
 //  Created by Guest User on 26/12/2024.
 //
 
-import UIKit
+//
+//  ArticleFirstPageViewController.swift
+//  BetterJobzApp
+//
+//  Created by Guest User on 26/12/2024.
+//
 
-class ArticleFirstPageViewController: UIViewController {
+import UIKit
+import FirebaseAuth
+
+class ArticleFirstPageViewController: BaseArticleViewController {
 
     @IBOutlet weak var firstLikeButton: UIButton!
     @IBOutlet weak var firstSaveButton: UIButton!
     
-    // Keys for UserDefaults
-    let likeButtonKey = "likeButtonState"
-    let saveButtonKey = "saveButtonState"
-    
-    // Track the states
+    @IBOutlet weak var secondLikeButton: UIButton!
+    @IBOutlet weak var secondSaveButton: UIButton!
+
     var isFirstButtonLiked = false
     var isFirstButtonSaved = false
     
+    var isSecondButtonLiked = false
+    var isSecondButtonSaved = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Restore states from UserDefaults
-        isFirstButtonLiked = UserDefaults.standard.bool(forKey: likeButtonKey)
-        updateLikeButtonImage()
+        // Assign user ID after login
+        guard let userID = Auth.auth().currentUser?.uid else {
+            print("User not logged in")
+            return
+        }
+        self.userID = userID
 
-        isFirstButtonSaved = UserDefaults.standard.bool(forKey: saveButtonKey)
-        updateBookmarkButtonImage()
+        // Fetch and update button states
+        fetchButtonStates(likeKey: "likeButtonState", saveKey: "saveButtonState") { [weak self] isLiked, isSaved in
+            guard let self = self else { return }
+            self.isFirstButtonLiked = isLiked
+            self.isFirstButtonSaved = isSaved
+            self.updateFirstButtonImages()
+        }
         
-        // Add observer for state updates
-        NotificationCenter.default.addObserver(self, selector: #selector(updateStates), name: NSNotification.Name("UpdateStates"), object: nil)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        // Fetch and update states for the second set of buttons
+        fetchButtonStates(likeKey: "secondLikeButtonState", saveKey: "secondSaveButtonState") { [weak self] isLiked, isSaved in
+            guard let self = self else { return }
+            self.isSecondButtonLiked = isLiked
+            self.isSecondButtonSaved = isSaved
+            self.updateSecondButtonImages()
+        }
+
+        // Add a real-time listener
+        addRealTimeListener(likeKey: "likeButtonState", saveKey: "saveButtonState") { [weak self] isLiked, isSaved in
+            guard let self = self else { return }
+            self.isFirstButtonLiked = isLiked
+            self.isFirstButtonSaved = isSaved
+            self.updateFirstButtonImages()
+        }
         
-        // Reload the state when the view appears
-        isFirstButtonLiked = UserDefaults.standard.bool(forKey: likeButtonKey)
-        isFirstButtonSaved = UserDefaults.standard.bool(forKey: saveButtonKey)
-        updateLikeButtonImage()
-        updateBookmarkButtonImage()
+        //Second listener
+        addRealTimeListener(likeKey: "secondLikeButtonState", saveKey: "secondSaveButtonState") { [weak self] isLiked, isSaved in
+            guard let self = self else { return }
+            self.isSecondButtonLiked = isLiked
+            self.isSecondButtonSaved = isSaved
+            self.updateSecondButtonImages()
+        }
     }
-    
+
     @IBAction func firstLikeButtonTapped(_ sender: Any) {
-        // Toggle the state
         isFirstButtonLiked.toggle()
-
-        // Save the new state
-        UserDefaults.standard.set(isFirstButtonLiked, forKey: likeButtonKey)
-        
-        // Notify other views of the change
-        NotificationCenter.default.post(name: NSNotification.Name("UpdateStates"), object: nil)
-
-        // Update the button's image
-        updateLikeButtonImage()
+        saveButtonStates(
+            likeKey: "likeButtonState",
+            saveKey: "saveButtonState",
+            isLiked: isFirstButtonLiked,
+            isSaved: isFirstButtonSaved
+        )
     }
-    
+
     @IBAction func firstSaveButtonTapped(_ sender: Any) {
-        // Toggle the state
         isFirstButtonSaved.toggle()
+        saveButtonStates(
+            likeKey: "likeButtonState",
+            saveKey: "saveButtonState",
+            isLiked: isFirstButtonLiked,
+            isSaved: isFirstButtonSaved
+        )
+    }
+    
+    // Second Like Button Tapped
+    @IBAction func secondLikeButtonTapped(_ sender: Any) {
+        isSecondButtonLiked.toggle()
+        saveButtonStates(
+            likeKey: "secondLikeButtonState",
+            saveKey: "secondSaveButtonState",
+            isLiked: isSecondButtonLiked,
+            isSaved: isSecondButtonSaved
+        )
+    }
 
-        // Save the new state
-        UserDefaults.standard.set(isFirstButtonSaved, forKey: saveButtonKey)
-        
-        // Notify other views of the change
-        NotificationCenter.default.post(name: NSNotification.Name("UpdateStates"), object: nil)
+    // Second Save Button Tapped
+    @IBAction func secondSaveButtonTapped(_ sender: Any) {
+        isSecondButtonSaved.toggle()
+        saveButtonStates(
+            likeKey: "secondLikeButtonState",
+            saveKey: "secondSaveButtonState",
+            isLiked: isSecondButtonLiked,
+            isSaved: isSecondButtonSaved
+        )
+    }
 
-        // Update the button's image
-        updateBookmarkButtonImage()
+    // Update images for the first set of buttons
+    private func updateFirstButtonImages() {
+        firstLikeButton.setImage(UIImage(systemName: isFirstButtonLiked ? "heart.fill" : "heart"), for: .normal)
+        firstSaveButton.setImage(UIImage(systemName: isFirstButtonSaved ? "bookmark.fill" : "bookmark"), for: .normal)
     }
     
-    private func updateLikeButtonImage() {
-        if isFirstButtonLiked {
-            firstLikeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-        } else {
-            firstLikeButton.setImage(UIImage(systemName: "heart"), for: .normal)
-        }
+    // Update images for the second set of buttons
+    private func updateSecondButtonImages() {
+        secondLikeButton.setImage(UIImage(systemName: isSecondButtonLiked ? "heart.fill" : "heart"), for: .normal)
+        secondSaveButton.setImage(UIImage(systemName: isSecondButtonSaved ? "bookmark.fill" : "bookmark"), for: .normal)
     }
-    
-    private func updateBookmarkButtonImage() {
-        if isFirstButtonSaved {
-            firstSaveButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
-        } else {
-            firstSaveButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
-        }
-    }
-    
-    @objc private func updateStates() {
-        // Reload states from UserDefaults when notified
-        isFirstButtonLiked = UserDefaults.standard.bool(forKey: likeButtonKey)
-        isFirstButtonSaved = UserDefaults.standard.bool(forKey: saveButtonKey)
-        updateLikeButtonImage()
-        updateBookmarkButtonImage()
-    }
-    
-    //Second Article
-    @IBAction func secondArticle(_ sender: Any) {
 
+    // Second Article Button Action
+    @IBAction func secondArticleTapped(_ sender: Any) {
+        // Define the website URL
         let websiteURL = URL(string: "https://drexel.edu/scdc/professional-resources/application-materials/resumes/experience-description")!
 
         // Open the URL
@@ -108,16 +138,4 @@ class ArticleFirstPageViewController: UIViewController {
             print("Cannot open URL")
         }
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

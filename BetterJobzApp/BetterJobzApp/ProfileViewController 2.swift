@@ -1,161 +1,163 @@
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class ProfileViewController: UITableViewController {
+    
     // Outlets
-    
     @IBOutlet weak var profileImageView: UIImageView!
-    
     @IBOutlet weak var usernameTextField: UITextField!
-    
     @IBOutlet weak var occupationTextField: UITextField!
-    
     @IBOutlet weak var employerTextField: UITextField!
-    
     @IBOutlet weak var locationTextField: UITextField!
-    
     @IBOutlet weak var emailTextField: UITextField!
-    
     @IBOutlet weak var phoneNumberTextField: UITextField!
-    
     @IBOutlet weak var jobExperienceTextView: UITextView!
-    
     @IBOutlet weak var educationTextView: UITextView!
-    
     @IBOutlet weak var skillsTextView: UITextView!
-    
     @IBOutlet weak var saveButton: UIButton!
-    
     @IBOutlet weak var editButton: UIButton!
+    
+    let databaseRef = Database.database().reference()
+    var userUID: String? {
+        return Auth.auth().currentUser?.uid
+    }
     
     var isInEditMode = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        loadUserData() // Load data when the app starts
+        loadCVData()       // Fetch and display details from the CV child
+        loadProfileData()  // Fetch profile details from the profile child (if any)
     }
     
-    func loadUserData() {
-        let defaults = UserDefaults.standard
-
-        usernameTextField.text = defaults.string(forKey: "username")
-        occupationTextField.text = defaults.string(forKey: "occupation")
-        employerTextField.text = defaults.string(forKey: "employer")
-        locationTextField.text = defaults.string(forKey: "location")
-        emailTextField.text = defaults.string(forKey: "email")
-        phoneNumberTextField.text = defaults.string(forKey: "phoneNumber")
-        jobExperienceTextView.text = defaults.string(forKey: "jobExperience")
-        educationTextView.text = defaults.string(forKey: "education")
-        skillsTextView.text = defaults.string(forKey: "skills")
-
-        if let imageData = defaults.data(forKey: "profileImage"), let profileImage = UIImage(data: imageData) {
-            profileImageView.image = profileImage
+    // MARK: - Load CV Data
+    private func loadCVData() {
+        guard let userUID = userUID else {
+            print("No user UID found")
+            return
+        }
+        
+        // Fetch CV data from Firebase
+        databaseRef.child("users").child(userUID).child("cv").observeSingleEvent(of: .value) { [weak self] snapshot in
+            guard let self = self, let cvData = snapshot.value as? [String: Any] else {
+                print("No CV data found.")
+                return
+            }
+            
+            // Populate text fields and text views from the CV child
+            self.usernameTextField.text = cvData["fullName"] as? String ?? ""
+            self.occupationTextField.text = cvData["occupation"] as? String ?? ""
+            self.emailTextField.text = cvData["email"] as? String ?? ""
+            self.phoneNumberTextField.text = cvData["phoneNumber"] as? String ?? ""
+            self.educationTextView.text = cvData["education"] as? String ?? ""
+            self.skillsTextView.text = cvData["language"] as? String ?? ""  // Assuming "skills" are mapped to "language" in the CV child
         }
     }
-
-    func saveUserData() {
-        let defaults = UserDefaults.standard
-
-        defaults.set(usernameTextField.text, forKey: "username")
-        defaults.set(occupationTextField.text, forKey: "occupation")
-        defaults.set(employerTextField.text, forKey: "employer")
-        defaults.set(locationTextField.text, forKey: "location")
-        defaults.set(emailTextField.text, forKey: "email")
-        defaults.set(phoneNumberTextField.text, forKey: "phoneNumber")
-        defaults.set(jobExperienceTextView.text, forKey: "jobExperience")
-        defaults.set(educationTextView.text, forKey: "education")
-        defaults.set(skillsTextView.text, forKey: "skills")
-
-        if let profileImage = profileImageView.image, let imageData = profileImage.pngData() {
-            defaults.set(imageData, forKey: "profileImage")
+    
+    // MARK: - Load Profile Data
+    private func loadProfileData() {
+        guard let userUID = userUID else {
+            print("No user UID found")
+            return
         }
-
-        defaults.synchronize()
-        print("User data saved.")
+        
+        // Fetch profile data from the profile child
+        databaseRef.child("users").child(userUID).child("profile").observeSingleEvent(of: .value) { [weak self] snapshot in
+            guard let self = self, let profileData = snapshot.value as? [String: Any] else {
+                print("No profile data found.")
+                return
+            }
+            
+            // Populate additional profile details
+            self.employerTextField.text = profileData["employer"] as? String
+            self.locationTextField.text = profileData["location"] as? String
+            
+            // Optional: Handle profile image if stored
+            if let profileImageUrl = profileData["profileImage"] as? String, let url = URL(string: profileImageUrl) {
+                self.loadProfileImage(from: url)
+            }
+        }
     }
-
-    func setupUI() {
-        saveButton.isHidden = true // Initially hide the save button
+    
+    private func loadProfileImage(from url: URL) {
+        DispatchQueue.global().async {
+            if let data = try? Data(contentsOf: url), let image = UIImage(data: data) {
+                DispatchQueue.main.async {
+                    self.profileImageView.image = image
+                }
+            }
+        }
+    }
+    
+    // MARK: - Save Profile Data
+    private func saveProfileData() {
+        guard let userUID = userUID else {
+            print("No user UID found")
+            return
+        }
+        
+        // Prepare profile data to save into the profile child
+        let profileData: [String: Any] = [
+            "employer": employerTextField.text ?? "",
+            "location": locationTextField.text ?? "",
+            "profileImage": "" // Placeholder; handle image upload to Firebase Storage separately
+        ]
+        
+        // Save profile data to Firebase under the profile child
+        databaseRef.child("users").child(userUID).child("profile").setValue(profileData) { error, _ in
+            if let error = error {
+                print("Failed to save profile data: \(error.localizedDescription)")
+            } else {
+                print("Profile data saved successfully!")
+            }
+        }
+    }
+    
+    // MARK: - UI Setup
+    private func setupUI() {
+        saveButton.isHidden = true // Hide save button initially
         toggleEditingMode(isEditing: false)
         setupProfileImageTap()
     }
-
-    func toggleEditingMode(isEditing: Bool) {
+    
+    private func toggleEditingMode(isEditing: Bool) {
         isInEditMode = isEditing
-
-        // Update text fields
-        usernameTextField.isUserInteractionEnabled = isEditing
-        occupationTextField.isUserInteractionEnabled = isEditing
+        
+        // Toggle text field interaction
         employerTextField.isUserInteractionEnabled = isEditing
         locationTextField.isUserInteractionEnabled = isEditing
-        emailTextField.isUserInteractionEnabled = isEditing
-        phoneNumberTextField.isUserInteractionEnabled = isEditing
-
-        // Update text views
+        
+        // Toggle text view interaction (if required)
         jobExperienceTextView.isEditable = isEditing
         educationTextView.isEditable = isEditing
         skillsTextView.isEditable = isEditing
-        jobExperienceTextView.isUserInteractionEnabled = isEditing
-        educationTextView.isUserInteractionEnabled = isEditing
-        skillsTextView.isUserInteractionEnabled = isEditing
-
-        // Debugging prints
-        print("jobExperienceTextView isEditable: \(jobExperienceTextView.isEditable)")
-        print("educationTextView isEditable: \(educationTextView.isEditable)")
-        print("skillsTextView isEditable: \(skillsTextView.isEditable)")
-
-        // Update UI appearance
-        let fontColor: UIColor = isEditing ? .red : .black
-        let backgroundColor: UIColor = isEditing ? .red.withAlphaComponent(0.1) : UIColor(red: 55/255.0, green: 89/255.0, blue: 156/255.0, alpha: 1.0)
-
-        usernameTextField.textColor = fontColor
-        occupationTextField.textColor = fontColor
-        employerTextField.textColor = fontColor
-        locationTextField.textColor = fontColor
-        emailTextField.textColor = fontColor
-        phoneNumberTextField.textColor = fontColor
-
-        jobExperienceTextView.backgroundColor = backgroundColor
-        educationTextView.backgroundColor = backgroundColor
-        skillsTextView.backgroundColor = backgroundColor
-
-        // Toggle buttons
+        
+        // Show/hide buttons
         saveButton.isHidden = !isEditing
         editButton.isHidden = isEditing
     }
-
-
-    func setupProfileImageTap() {
-        // Add tap gesture recognizer for profile picture
+    
+    private func setupProfileImageTap() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(profileImageTapped))
         profileImageView.addGestureRecognizer(tapGesture)
         profileImageView.isUserInteractionEnabled = true
     }
-
-    @objc func profileImageTapped() {
+    
+    @objc private func profileImageTapped() {
         if isInEditMode {
-            // Open ImagePickerViewController
-            if let imagePickerVC = storyboard?.instantiateViewController(withIdentifier: "ImagePickerViewController") as? ImagePickerViewController {
-                imagePickerVC.delegate = self
-                present(imagePickerVC, animated: true, completion: nil)
-            }
+            // Open image picker (implement separately)
         }
     }
-
-    // Actions
+    
+    // MARK: - Actions
     @IBAction func editButtonTapped(_ sender: UIButton) {
         toggleEditingMode(isEditing: true)
     }
-
+    
     @IBAction func saveButtonTapped(_ sender: UIButton) {
         toggleEditingMode(isEditing: false)
-        saveUserData()
-    }
-}
-
-// MARK: - ImagePickerDelegate
-extension ProfileViewController: ImagePickerDelegate {
-    func didSelectProfileImage(_ image: UIImage?) {
-        profileImageView.image = image // Update profile picture
+        saveProfileData() // Save profile data into a new child collection
     }
 }
