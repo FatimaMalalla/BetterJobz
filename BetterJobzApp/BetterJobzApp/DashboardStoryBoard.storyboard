@@ -49,25 +49,49 @@
                                                             <action selector="jobApplicationStatusButtonTapped:" destination="K2s-Fe-mK5" eventType="touchUpInside" id="HmV-5g-9oW"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9B-gs-Zjr">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Kab-of-7pH">
                                                         <rect key="frame" x="0.0" y="72" width="361" height="66"/>
-                                                        <color key="backgroundColor" red="0.1024794802" green="0.16145801539999999" blue="0.30207788940000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="66" id="ezO-WW-kGF"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Button" image="arrow.right" catalog="system"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Skill Development">
-                                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </buttonConfiguration>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                <integer key="value" value="10"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <segue destination="7pY-xK-blE" kind="presentation" modalPresentationStyle="fullScreen" id="UhN-gF-OQ8"/>
-                                                        </connections>
-                                                    </button>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9B-gs-Zjr">
+                                                                <rect key="frame" x="0.0" y="0.0" width="177" height="66"/>
+                                                                <color key="backgroundColor" red="0.1024794802" green="0.16145801539999999" blue="0.30207788940000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="66" id="ezO-WW-kGF"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button" image="arrow.right" catalog="system"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Skill Development">
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <segue destination="7pY-xK-blE" kind="presentation" modalPresentationStyle="fullScreen" id="UhN-gF-OQ8"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKl-6X-k67">
+                                                                <rect key="frame" x="184" y="0.0" width="177" height="66"/>
+                                                                <color key="backgroundColor" red="0.1024794802" green="0.16145801539999999" blue="0.30207788940000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="66" id="XbR-pL-9wV"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button" image="arrow.right" catalog="system"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Job Application">
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <segue destination="31a-BK-TeW" kind="presentation" modalPresentationStyle="fullScreen" id="ab3-Gk-gig"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ge-CN-6AM">
                                                         <rect key="frame" x="0.0" y="144" width="361" height="27.666666666666657"/>
                                                         <attributedString key="attributedText">
@@ -225,9 +249,7 @@ Job Available</string>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="n2P-Rh-EoV" firstAttribute="top" secondItem="xGK-dJ-O4w" secondAttribute="top" constant="473" id="0kR-i7-LcK"/>
-                                                    <constraint firstAttribute="trailing" secondItem="O9B-gs-Zjr" secondAttribute="trailing" id="FvP-h1-zUx"/>
                                                     <constraint firstItem="S8w-kw-A4U" firstAttribute="top" secondItem="xGK-dJ-O4w" secondAttribute="top" constant="621" id="KBF-7S-MPx"/>
-                                                    <constraint firstItem="O9B-gs-Zjr" firstAttribute="leading" secondItem="xGK-dJ-O4w" secondAttribute="leading" id="est-ZZ-vRt"/>
                                                     <constraint firstItem="DtX-9o-3WZ" firstAttribute="leading" secondItem="xGK-dJ-O4w" secondAttribute="leading" id="jVL-OK-iJO"/>
                                                     <constraint firstAttribute="trailing" secondItem="DtX-9o-3WZ" secondAttribute="trailing" id="pDW-3b-say"/>
                                                     <constraint firstItem="1eH-Xo-FBF" firstAttribute="top" secondItem="xGK-dJ-O4w" secondAttribute="top" constant="325" id="rlz-a4-L4H"/>
@@ -278,6 +300,14 @@ Job Available</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JXX-QL-pYo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-572" y="-561"/>
+        </scene>
+        <!--JobApplyingFormStoryboard-->
+        <scene sceneID="ZRY-MW-9u8">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="JobApply" storyboardName="JobApplyingFormStoryboard" id="31a-BK-TeW" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Cr-5K-Yd7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="221" y="-259"/>
         </scene>
         <!--SkillStoryboard-->
         <scene sceneID="a7Y-Gb-C9I">
