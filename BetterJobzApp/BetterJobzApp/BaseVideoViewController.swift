@@ -1,26 +1,25 @@
 //
-//  BaseArticleViewController.swift
+//  BaseVideoViewController.swift
 //  BetterJobzApp
 //
-//  Created by BP-36-201-14 on 26/12/2024.
+//  Created by BP-36-224-14 on 27/12/2024.
 //
 
 import UIKit
 import Firebase
 import FirebaseAuth
 
-class BaseArticleViewController: UIViewController {
+class BaseVideoViewController: UIViewController {
 
     var userID: String = "" // To be dynamically set after login
     var ref: DatabaseReference!
-    //var buttonStateChangeHandler: ((Bool, Bool) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
     }
 
-    // Fetch button states from Firebase for the current user
+    // Generalized method to fetch button states with specific keys
     func fetchButtonStates(likeKey: String, saveKey: String, completion: @escaping (Bool, Bool) -> Void) {
         guard !userID.isEmpty else {
             print("User ID is not set.")
@@ -28,7 +27,7 @@ class BaseArticleViewController: UIViewController {
             return
         }
 
-        ref.child("users").child(userID).child("article").observeSingleEvent(of: .value) { snapshot in
+        ref.child("users").child(userID).child("video").observeSingleEvent(of: .value) { snapshot in
             if let data = snapshot.value as? [String: Any] {
                 let isLiked = data[likeKey] as? Bool ?? false
                 let isSaved = data[saveKey] as? Bool ?? false
@@ -38,14 +37,15 @@ class BaseArticleViewController: UIViewController {
             }
         }
     }
-    
+
+    // Generalized real-time listener for button states
     func addRealTimeListener(likeKey: String, saveKey: String, stateChangeHandler: @escaping (Bool, Bool) -> Void) {
         guard !userID.isEmpty else {
             print("User ID is not set.")
             return
         }
 
-        ref.child("users").child(userID).child("article").observe(.value) { snapshot in
+        ref.child("users").child(userID).child("video").observe(.value) { snapshot in
             if let data = snapshot.value as? [String: Any] {
                 let isLiked = data[likeKey] as? Bool ?? false
                 let isSaved = data[saveKey] as? Bool ?? false
@@ -54,7 +54,7 @@ class BaseArticleViewController: UIViewController {
         }
     }
 
-    // Save button states to Firebase for the current user
+    // Generalized method to save button states with specific keys
     func saveButtonStates(likeKey: String, saveKey: String, isLiked: Bool, isSaved: Bool) {
         guard !userID.isEmpty else {
             print("User ID is not set.")
@@ -65,6 +65,6 @@ class BaseArticleViewController: UIViewController {
             likeKey: isLiked,
             saveKey: isSaved
         ]
-        ref.child("users").child(userID).child("article").updateChildValues(buttonStates)
+        ref.child("users").child(userID).child("video").updateChildValues(buttonStates)
     }
 }

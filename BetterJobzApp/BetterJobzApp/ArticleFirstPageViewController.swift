@@ -40,7 +40,7 @@ class ArticleFirstPageViewController: BaseArticleViewController {
         self.userID = userID
 
         // Fetch and update button states
-        fetchButtonStates { [weak self] isLiked, isSaved in
+        fetchButtonStates(likeKey: "likeButtonState", saveKey: "saveButtonState") { [weak self] isLiked, isSaved in
             guard let self = self else { return }
             self.isFirstButtonLiked = isLiked
             self.isFirstButtonSaved = isSaved
@@ -48,7 +48,7 @@ class ArticleFirstPageViewController: BaseArticleViewController {
         }
         
         // Fetch and update states for the second set of buttons
-        fetchSecondButtonStates { [weak self] isLiked, isSaved in
+        fetchButtonStates(likeKey: "secondLikeButtonState", saveKey: "secondSaveButtonState") { [weak self] isLiked, isSaved in
             guard let self = self else { return }
             self.isSecondButtonLiked = isLiked
             self.isSecondButtonSaved = isSaved
@@ -56,44 +56,62 @@ class ArticleFirstPageViewController: BaseArticleViewController {
         }
 
         // Add a real-time listener
-        buttonStateChangeHandler = { [weak self] isLiked, isSaved in
+        addRealTimeListener(likeKey: "likeButtonState", saveKey: "saveButtonState") { [weak self] isLiked, isSaved in
             guard let self = self else { return }
             self.isFirstButtonLiked = isLiked
             self.isFirstButtonSaved = isSaved
             self.updateFirstButtonImages()
         }
-        addRealTimeListener()
         
         //Second listener
-        buttonStateChangeHandler = { [weak self] isLiked, isSaved in
+        addRealTimeListener(likeKey: "secondLikeButtonState", saveKey: "secondSaveButtonState") { [weak self] isLiked, isSaved in
             guard let self = self else { return }
             self.isSecondButtonLiked = isLiked
             self.isSecondButtonSaved = isSaved
             self.updateSecondButtonImages()
         }
-        addSecondRealTimeListener()
     }
 
     @IBAction func firstLikeButtonTapped(_ sender: Any) {
         isFirstButtonLiked.toggle()
-        saveButtonStates(isLiked: isFirstButtonLiked, isSaved: isFirstButtonSaved)
+        saveButtonStates(
+            likeKey: "likeButtonState",
+            saveKey: "saveButtonState",
+            isLiked: isFirstButtonLiked,
+            isSaved: isFirstButtonSaved
+        )
     }
 
     @IBAction func firstSaveButtonTapped(_ sender: Any) {
         isFirstButtonSaved.toggle()
-        saveButtonStates(isLiked: isFirstButtonLiked, isSaved: isFirstButtonSaved)
+        saveButtonStates(
+            likeKey: "likeButtonState",
+            saveKey: "saveButtonState",
+            isLiked: isFirstButtonLiked,
+            isSaved: isFirstButtonSaved
+        )
     }
     
     // Second Like Button Tapped
     @IBAction func secondLikeButtonTapped(_ sender: Any) {
         isSecondButtonLiked.toggle()
-        saveSecondButtonStates(isLiked: isSecondButtonLiked, isSaved: isSecondButtonSaved)
+        saveButtonStates(
+            likeKey: "secondLikeButtonState",
+            saveKey: "secondSaveButtonState",
+            isLiked: isSecondButtonLiked,
+            isSaved: isSecondButtonSaved
+        )
     }
 
     // Second Save Button Tapped
     @IBAction func secondSaveButtonTapped(_ sender: Any) {
         isSecondButtonSaved.toggle()
-        saveSecondButtonStates(isLiked: isSecondButtonLiked, isSaved: isSecondButtonSaved)
+        saveButtonStates(
+            likeKey: "secondLikeButtonState",
+            saveKey: "secondSaveButtonState",
+            isLiked: isSecondButtonLiked,
+            isSaved: isSecondButtonSaved
+        )
     }
 
     // Update images for the first set of buttons
@@ -107,39 +125,6 @@ class ArticleFirstPageViewController: BaseArticleViewController {
         secondLikeButton.setImage(UIImage(systemName: isSecondButtonLiked ? "heart.fill" : "heart"), for: .normal)
         secondSaveButton.setImage(UIImage(systemName: isSecondButtonSaved ? "bookmark.fill" : "bookmark"), for: .normal)
     }
-    
-    // Fetch states for the second set of buttons from Firebase
-//    func fetchSecondButtonStates(completion: @escaping (Bool, Bool) -> Void) {
-//        guard !userID.isEmpty else {
-//            print("User ID is not set.")
-//            completion(false, false)
-//            return
-//        }
-//
-//        ref.child("users").child(userID).observeSingleEvent(of: .value) { snapshot in
-//            if let data = snapshot.value as? [String: Any] {
-//                let isLiked = data["secondLikeButtonState"] as? Bool ?? false
-//                let isSaved = data["secondSaveButtonState"] as? Bool ?? false
-//                completion(isLiked, isSaved)
-//            } else {
-//                completion(false, false) // Default states if no data exists
-//            }
-//        }
-//    }
-    
-    // Save states for the second set of buttons to Firebase
-//    func saveSecondButtonStates(isLiked: Bool, isSaved: Bool) {
-//        guard !userID.isEmpty else {
-//            print("User ID is not set.")
-//            return
-//        }
-//
-//        let secondButtonStates: [String: Any] = [
-//            "secondLikeButtonState": isLiked,
-//            "secondSaveButtonState": isSaved
-//        ]
-//        ref.child("users").child(userID).updateChildValues(secondButtonStates)
-//    }
 
     // Second Article Button Action
     @IBAction func secondArticleTapped(_ sender: Any) {
