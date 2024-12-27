@@ -7,40 +7,40 @@
 
 import UIKit
 
+/// View controller to display applicant's name and show a confirmation message.
 class MessageViewController: UIViewController {
-    @IBOutlet weak var recipientLabel: UILabel!
-    @IBOutlet weak var messageTextView: UITextView!
+    @IBOutlet weak var recipientLabel: UILabel! // Label to display recipient's name.
 
-    var applicantIndex: Int?
+    var applicantIndex: Int? // Index of the recipient applicant.
 
     override func viewDidLoad() {
         super.viewDidLoad()
         loadRecipientDetails()
     }
 
+    /// Loads the recipient details into the label.
     private func loadRecipientDetails() {
         guard let index = applicantIndex,
-              let applicant = ApplicantManager.shared.getApplicant(at: index) else { return }
-        recipientLabel.text = "Message to: \(applicant.name)"
-    }
-
-    @IBAction func sendMessageTapped(_ sender: UIButton) {
-        guard let message = messageTextView.text, !message.isEmpty,
-              let index = applicantIndex else {
-            showAlert(title: "Error", message: "Message cannot be empty.")
+              index < ApplicantManager.shared.applicants.count else {
+            recipientLabel.text = "Unknown Recipient"
             return
         }
 
-        // Add the message to the applicant
-        ApplicantManager.shared.addMessage(forApplicantAt: index, message: message)
-
-        // Dismiss the view
-        navigationController?.popViewController(animated: true)
+        let applicant = ApplicantManager.shared.applicants[index]
+        recipientLabel.text = "Message to: \(applicant.name)"
     }
 
-    private func showAlert(title: String, message: String) {
+    /// Handles the button tap to show a confirmation message.
+    @IBAction func sendMessageButtonTapped(_ sender: UIButton) {
+        showAlert("Message Sent", "Your message has been sent successfully to \(recipientLabel.text ?? "the applicant").")
+    }
+
+    /// Displays an alert with a confirmation message.
+    private func showAlert(_ title: String, _ message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in
+            self.navigationController?.popViewController(animated: true)
+        })
         present(alert, animated: true)
     }
 }

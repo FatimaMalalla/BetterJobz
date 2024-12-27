@@ -4,78 +4,45 @@
 //
 //  Created by Macbook Pro on 27/12/2024.
 //
-
 import UIKit
 
+
 class PostJobViewController: UIViewController {
-    @IBOutlet weak var titleTextField: UITextField!
-    @IBOutlet weak var typeTextField: UITextField!
-    @IBOutlet weak var locationTextField: UITextField!
-    @IBOutlet weak var salaryTextField: UITextField!
-    @IBOutlet weak var requiredSkillTextField: UITextField!
-    @IBOutlet weak var descriptionTextView: UITextView!
-    @IBOutlet weak var deadlineTextField: UITextField!
+    @IBOutlet weak var titleTextField: UITextField! // Field for job title.
+    @IBOutlet weak var locationTextField: UITextField! // Field for job location.
+    @IBOutlet weak var jobTypeTextField: UITextField! // Field for job type.
+    @IBOutlet weak var salaryRangeTextField: UITextField! // Field for salary range.
+    @IBOutlet weak var requiredSkillTextField: UITextField! // Field for required skills.
+    @IBOutlet weak var descriptionTextView: UITextView! // Field for job description.
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tapGesture)
-    }
-
+    /// Handles the post job action when the button is tapped.
     @IBAction func postJobButtonTapped(_ sender: UIButton) {
-        // Validate inputs
+        // Ensure all required fields are filled.
         guard let title = titleTextField.text, !title.isEmpty,
-              let type = typeTextField.text, !type.isEmpty,
-              let location = locationTextField.text, !location.isEmpty,
-              let salary = salaryTextField.text, Double(salary) != nil,
-              let requiredSkill = requiredSkillTextField.text, !requiredSkill.isEmpty,
-              let deadline = deadlineTextField.text, !deadline.isEmpty,
-              let description = descriptionTextView.text, !description.isEmpty else {
-            showAlert(title: "Error", message: "All fields are required and salary must be numeric!")
+              let location = locationTextField.text, !location.isEmpty else {
+            showAlert("Error", "Title and location are required.")
             return
         }
 
-        // Create and add new job
-        let newJob = Job(title: title, type: type, location: location, salary: salary, requiredSkill: requiredSkill, description: description)
+        // Create a new job object.
+        let newJob = Job(
+            title: title,
+            location: location,
+            jobType: jobTypeTextField.text ?? "",
+            salaryRange: salaryRangeTextField.text ?? "",
+            requiredSkill: requiredSkillTextField.text ?? "",
+            description: descriptionTextView.text ?? ""
+        )
+
+        // Add the job to the manager and navigate back.
         JobManager.shared.addJob(newJob)
-
-        // Notify other views about the new job
-        NotificationCenter.default.post(name: .jobDataChanged, object: nil)
-
-        // Reset fields and show success message
-        resetFields()
-        showSuccessMessage()
+        navigationController?.popViewController(animated: true)
     }
 
-    private func showAlert(title: String, message: String) {
+    /// Displays an alert with a title and message.
+    private func showAlert(_ title: String, _ message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)
     }
-
-    private func showSuccessMessage() {
-        let alert = UIAlertController(title: "Success", message: "Job posted successfully!", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-            self.navigationController?.popViewController(animated: true)
-        }))
-        present(alert, animated: true)
-    }
-
-    private func resetFields() {
-        titleTextField.text = ""
-        typeTextField.text = ""
-        locationTextField.text = ""
-        salaryTextField.text = ""
-        requiredSkillTextField.text = ""
-        deadlineTextField.text = ""
-        descriptionTextView.text = ""
-    }
-
-    @IBAction func cancel(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-    }
-    @objc private func dismissKeyboard() {
-        view.endEditing(true)
-    }
 }
-

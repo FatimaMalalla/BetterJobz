@@ -6,22 +6,12 @@
 //
 
 
-import Foundation
-
-extension Notification.Name {
-    static let jobDataChanged = Notification.Name("jobDataChanged")
-}
-
 class JobManager {
     static let shared = JobManager()
+    
+    private init() {} // Prevent external instantiation
 
-    private init() {}
-
-    var jobs: [Job] = [] {
-        didSet {
-            NotificationCenter.default.post(name: .jobDataChanged, object: nil)
-        }
-    }
+    var jobs: [Job] = [] // Shared list of jobs
 
     func addJob(_ job: Job) {
         jobs.append(job)

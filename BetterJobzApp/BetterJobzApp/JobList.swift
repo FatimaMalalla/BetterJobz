@@ -8,51 +8,43 @@
 //  Created by Macbook Pro on 26/12/2024.
 import UIKit
 
+/// View controller to display a list of jobs.
 class JobListViewController: UIViewController {
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var tableView: UITableView! // Table view to display jobs.
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        NotificationCenter.default.addObserver(self, selector: #selector(refreshJobList), name: .jobDataChanged, object: nil)
-        refreshJobList()
-    }
-
-    @objc private func refreshJobList() {
-        // Clear existing views
-        stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
-
-        // Add jobs to the stack view
-        for job in JobManager.shared.jobs {
-            let jobView = createJobView(for: job)
-            stackView.addArrangedSubview(jobView)
-        }
-    }
-
-    private func createJobView(for job: Job) -> UIView {
-        let container = UIView()
-        container.translatesAutoresizingMaskIntoConstraints = false
-        container.heightAnchor.constraint(equalToConstant: 100).isActive = true
-
-        let titleLabel = UILabel()
-        titleLabel.text = job.title
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 16)
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-
-        container.addSubview(titleLabel)
-
-        NSLayoutConstraint.activate([
-            titleLabel.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 16),
-            titleLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -16),
-            titleLabel.centerYAnchor.constraint(equalTo: container.centerYAnchor)
-        ])
-
-        return container
-    }
-
-    deinit {
-        NotificationCenter.default.removeObserver(self, name: .jobDataChanged, object: nil)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData() // Reload table view when the view appears.
     }
 }
 
+extension JobListViewController: UITableViewDataSource, UITableViewDelegate {
+    /// Number of rows in the table view.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return JobManager.shared.jobs.count
+    }
+
+    /// Configures each cell in the table view.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "JobCell", for: indexPath)
+        let job = JobManager.shared.jobs[indexPath.row]
+        cell.textLabel?.text = job.title
+        cell.detailTextLabel?.text = job.location
+        return cell
+    }
+
+    /// Handles selection of a job in the table view.
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedJob = JobManager.shared.jobs[indexPath.row]
+        performSegue(withIdentifier: "goToJobInfo", sender: selectedJob)
+    }
+
+    /// Prepares for segue navigation.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToJobInfo",
+           let destinationVC = segue.destination as? JobInformationViewController,
+           let job = sender as? Job {
+            destinationVC.job = job
+        }
+    }
+}

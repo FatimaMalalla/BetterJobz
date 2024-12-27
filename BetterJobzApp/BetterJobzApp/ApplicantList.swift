@@ -7,42 +7,42 @@
 
 import UIKit
 
-class ApplicantListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet weak var tableView: UITableView!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
-    }
+/// View controller to display a list of applicants.
+class ApplicantListViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView! // Table view to display applicants.
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableView.reloadData() // Reload the table view whenever the view appears
+        tableView.reloadData() // Reload the table view whenever the view appears.
     }
+}
 
+extension ApplicantListViewController: UITableViewDataSource, UITableViewDelegate {
+    /// Number of rows in the table view.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ApplicantManager.shared.applicants.count
     }
 
+    /// Configures each cell in the table view.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ApplicantCell", for: indexPath)
         let applicant = ApplicantManager.shared.applicants[indexPath.row]
         cell.textLabel?.text = applicant.name
-        cell.detailTextLabel?.text = applicant.email
         return cell
     }
 
+    /// Handles the selection of an applicant to view details.
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "goToApplicantDetails", sender: indexPath.row)
+        let selectedApplicantIndex = indexPath.row
+        performSegue(withIdentifier: "goToApplicantDetails", sender: selectedApplicantIndex)
     }
 
+    /// Prepares for segue navigation to applicant details.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToApplicantDetails",
            let destinationVC = segue.destination as? ApplicantDetailsViewController,
            let applicantIndex = sender as? Int {
-            destinationVC.applicantIndex = applicantIndex // Pass the selected applicant's index
+            destinationVC.applicantIndex = applicantIndex
         }
     }
 }

@@ -7,35 +7,36 @@
 
 import UIKit
 
+/// View controller to add a new applicant.
 class AddApplicantViewController: UIViewController {
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var phoneNumberTextField: UITextField!
-    @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var nameTextField: UITextField! // Field for applicant name.
+    @IBOutlet weak var emailTextField: UITextField! // Field for applicant email.
+    @IBOutlet weak var phoneNumberTextField: UITextField! // Field for applicant phone number.
+    @IBOutlet weak var descriptionTextView: UITextView! // Field for applicant description.
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    @IBAction func addButtonTapped(_ sender: UIButton) {
-        // Validate inputs
+    /// Handles the add applicant action when the button is tapped.
+    @IBAction func addApplicantButtonTapped(_ sender: UIButton) {
         guard let name = nameTextField.text, !name.isEmpty,
               let email = emailTextField.text, !email.isEmpty,
               let phoneNumber = phoneNumberTextField.text, !phoneNumber.isEmpty,
               let description = descriptionTextView.text, !description.isEmpty else {
-            showAlert(title: "Error", message: "All fields are required!")
+            showAlert("Error", "All fields are required.")
             return
         }
 
-        // Create a new applicant
-        let newApplicant = Applicant(name: name, email: email, phoneNumber: phoneNumber, description: description)
-        ApplicantManager.shared.addApplicant(newApplicant)
+        let newApplicant = Applicant(
+            name: name,
+            email: email,
+            phoneNumber: phoneNumber,
+            description: description
+        )
 
-        // Dismiss the view
+        ApplicantManager.shared.addApplicant(newApplicant)
         navigationController?.popViewController(animated: true)
     }
 
-    private func showAlert(title: String, message: String) {
+    /// Displays an alert with a title and message.
+    private func showAlert(_ title: String, _ message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)

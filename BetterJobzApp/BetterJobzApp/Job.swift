@@ -6,11 +6,10 @@
 //
 
 struct Job {
-    var title: String
-    var type: String
-    var location: String
-    var salary: String
-    var requiredSkill: String
-    var description: String
+    var title: String // Title of the job (e.g., "Software Engineer").
+    var location: String // Location of the job (e.g., "New York").
+    var jobType: String // Type of job (e.g., "Full-Time", "Part-Time").
+    var salaryRange: String // Salary range (e.g., "70,000 - 100,000 USD").
+    var requiredSkill: String // Skills required for the job.
+    var description: String // Detailed description of the job.
 }
-
