@@ -61,6 +61,7 @@
 		E426ED0E2D1EF1FD0094DDBF /* BaseVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E426ED0D2D1EF1FD0094DDBF /* BaseVideoViewController.swift */; };
 		E49C14C02D1EFE9A00957B7E /* JobApplicationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C14BF2D1EFE9A00957B7E /* JobApplicationTableViewController.swift */; };
 		E49C14C42D1F06E600957B7E /* JobApplyingFormStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49C14C32D1F06E600957B7E /* JobApplyingFormStoryboard.storyboard */; };
+		E49C14C62D1F0D7700957B7E /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C14C52D1F0D7700957B7E /* GradientButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +136,7 @@
 		E426ED0D2D1EF1FD0094DDBF /* BaseVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVideoViewController.swift; sourceTree = "<group>"; };
 		E49C14BF2D1EFE9A00957B7E /* JobApplicationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplicationTableViewController.swift; sourceTree = "<group>"; };
 		E49C14C32D1F06E600957B7E /* JobApplyingFormStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JobApplyingFormStoryboard.storyboard; sourceTree = "<group>"; };
+		E49C14C52D1F0D7700957B7E /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +246,7 @@
 				D43E51B62CF5EF0900916325 /* JobPostingStoryboard.storyboard */,
 				D43E51832CF5EA3800916325 /* Assets.xcassets */,
 				AC8559562D0F227B002DD57D /* GradientView.swift */,
+				E49C14C52D1F0D7700957B7E /* GradientButton.swift */,
 				D43E51882CF5EA3800916325 /* Info.plist */,
 				ACCA97F82D1D1D68005C9A09 /* GoogleService-Info.plist */,
 			);
@@ -445,6 +448,7 @@
 				C345BAD82D0B49F100205693 /* WorkEXPViewController.swift in Sources */,
 				D43E517D2CF5EA3600916325 /* SceneDelegate.swift in Sources */,
 				AC98437C2D1D91460085C628 /* SoftwareEngineerViewController.swift in Sources */,
+				E49C14C62D1F0D7700957B7E /* GradientButton.swift in Sources */,
 				C3F131EA2D0AF55600861187 /* TabBarViewController.swift in Sources */,
 				E426ED062D1EE34B0094DDBF /* BaseTutorialViewController.swift in Sources */,
 				CF18169B2D097C8C00D0162A /* SettingsViewController.swift in Sources */,
