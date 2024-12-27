@@ -27,7 +27,7 @@ class ArticleSecondPageViewController: BaseArticleViewController {
         self.userID = userID
 
         // Fetch and update button states
-        fetchButtonStates { [weak self] isLiked, isSaved in
+        fetchButtonStates(likeKey: "secondLikeButtonState", saveKey: "secondSaveButtonState") { [weak self] isLiked, isSaved in
             guard let self = self else { return }
             self.isSecondButtonLiked = isLiked
             self.isSecondButtonSaved = isSaved
@@ -35,23 +35,32 @@ class ArticleSecondPageViewController: BaseArticleViewController {
         }
 
         // Add a real-time listener
-        buttonStateChangeHandler = { [weak self] isLiked, isSaved in
+        addRealTimeListener(likeKey: "secondLikeButtonState", saveKey: "secondSaveButtonState") { [weak self] isLiked, isSaved in
             guard let self = self else { return }
             self.isSecondButtonLiked = isLiked
             self.isSecondButtonSaved = isSaved
             self.updateButtonImages()
         }
-        addRealTimeListener()
     }
 
     @IBAction func secondLikeButtonTapped(_ sender: Any) {
         isSecondButtonLiked.toggle()
-        saveButtonStates(isLiked: isSecondButtonLiked, isSaved: isSecondButtonSaved)
+        saveButtonStates(
+            likeKey: "secondLikeButtonState",
+            saveKey: "secondSaveButtonState",
+            isLiked: isSecondButtonLiked,
+            isSaved: isSecondButtonSaved
+        )
     }
 
     @IBAction func secondSaveButtonTapped(_ sender: Any) {
         isSecondButtonSaved.toggle()
-        saveButtonStates(isLiked: isSecondButtonLiked, isSaved: isSecondButtonSaved)
+        saveButtonStates(
+            likeKey: "secondLikeButtonState",
+            saveKey: "secondSaveButtonState",
+            isLiked: isSecondButtonLiked,
+            isSaved: isSecondButtonSaved
+        )
     }
 
     private func updateButtonImages() {
