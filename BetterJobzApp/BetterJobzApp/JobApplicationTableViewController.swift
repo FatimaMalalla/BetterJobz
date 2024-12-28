@@ -7,6 +7,8 @@
 
 import UIKit
 import FirebaseDatabase
+import Firebase
+import FirebaseAuth
 
 class JobApplicationTableViewController: UITableViewController {
     
@@ -36,6 +38,7 @@ class JobApplicationTableViewController: UITableViewController {
     
     
     var ref: DatabaseReference!
+    var userID: String = "" // To be dynamically set after login
     
     /// Displays an alert with a title, message, and an action button.
     func showAlert(title: String, message: String, buttonTitle: String = "OK", completion: (() -> Void)? = nil) {
@@ -53,6 +56,13 @@ class JobApplicationTableViewController: UITableViewController {
         super.viewDidLoad()
         
         ref = Database.database().reference()
+        
+        // Assign user ID after login
+        if let currentUserID = Auth.auth().currentUser?.uid {
+            self.userID = currentUserID
+        } else {
+            showAlert(title: "Error", message: "User not logged in.")
+        }
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -78,7 +88,8 @@ class JobApplicationTableViewController: UITableViewController {
             "Description of Current Job": description
         ]
         
-        ref.child("Current_Job_Details").childByAutoId().setValue(jobApplicationData)
+        
+        ref.child("users").child(userID).child("job_details").child("Current_Job_Details").setValue(jobApplicationData)
     }
     
     // Unemployed Next button
@@ -100,7 +111,7 @@ class JobApplicationTableViewController: UITableViewController {
             "Description of Previous Job": pDescription
         ]
         
-        ref.child("Previous_Job_Details").childByAutoId().setValue(jobApplicationData)
+        ref.child("users").child(userID).child("job_details").child("Previous_Job_Details").setValue(jobApplicationData)
     }
     
     // Qualification Next button
@@ -121,7 +132,7 @@ class JobApplicationTableViewController: UITableViewController {
             "Years of Experience": yearsOfExperienceBox
         ]
         
-        ref.child("Qualifications_Details").childByAutoId().setValue(jobApplicationData)
+        ref.child("users").child(userID).child("job_details").child("Qualifications_Details").setValue(jobApplicationData)
     }
     
     // Cover letter finish button
@@ -137,7 +148,7 @@ class JobApplicationTableViewController: UITableViewController {
             "Letter of Intent": letterOfIntentBox
             ]
         
-        ref.child("Letter_of_Intent").childByAutoId().setValue(jobApplicationData)
+        ref.child("users").child(userID).child("job_details").child("Letter_of_Intent").setValue(jobApplicationData)
     }
     
     
