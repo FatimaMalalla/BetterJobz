@@ -15,16 +15,29 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Check if a user is already logged in
-                if Auth.auth().currentUser != nil {
-                    // Navigate directly to the home screen
-                    self.performSegue(withIdentifier: "showDashboardSegue", sender: nil)
+        if let currentUser = Auth.auth().currentUser {
+            // Ensure the user's email is available
+            guard let email = currentUser.email else {
+                print("Error: Email not found for the current user.")
+                return
+            }
+
+            DispatchQueue.main.async {
+                // Navigate based on the user type
+                if email.lowercased().contains("employee") {
+                    self.performSegue(withIdentifier: "goToEmpHome", sender: self)
+                } else {
+                    self.performSegue(withIdentifier: "showDashboardSegue", sender: self)
                 }
+            }
+        }
     }
+
     
 
     
-    //Employee Login Credentials : employee@gmail.com , password : EMP123
-    //Job Seeker Login Credentials : Joyce@Gmail.com , Password : JY2000
+    //Employee Login Credentials : tom.employee@gmail.com , password : 123456
+    //Job Seeker Login Credentials : Johndoe@Gmail.com , Password : JDoe123
     
     
     @IBOutlet weak var Username: UITextField!
@@ -32,39 +45,37 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var Password: UITextField!
     
     @IBAction func loginButtonTapped(_ sender: Any) {
-        guard let username = Username.text, !username.isEmpty,
-                 let password = Password.text, !password.isEmpty else {
-               showAlert(title: "Missing Field Data", message: "Please fill in all required fields")
-               return
-           }
-           
-           Auth.auth().signIn(withEmail: username, password: password) { [weak self] authResult, error in
-               guard let self = self else { return }
-               
-               if let error = error {
-                   self.showAlert(title: "Error", message: error.localizedDescription)
-                   return
-               }
-               
-               if username.lowercased().contains("employee".lowercased()) {
-                   self.performSegue(withIdentifier: "goToEmpHome", sender: sender)
-               } else {
-                   self.performSegue(withIdentifier: "showDashboardSegue", sender: sender)
-               }
+        // Validate username and password fields
+            guard let username = Username.text, !username.isEmpty,
+                  let password = Password.text, !password.isEmpty else {
+                showAlert(title: "Missing Field Data", message: "Please fill in all required fields")
+                return
+            }
 
-               
-               if let user = Auth.auth().currentUser {
-                   print("Logged in as UID: \(user.uid)")
-                   
-                   // Navigate to the dashboard
-                   let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                   let dashboardVC = storyboard.instantiateViewController(withIdentifier: "DashboardViewController")
-                   dashboardVC.modalPresentationStyle = .fullScreen
-                   self.present(dashboardVC, animated: true) {
-                       self.view.window?.rootViewController = dashboardVC
-                   }
-               }
-           }
+            // Attempt to sign in the user
+            Auth.auth().signIn(withEmail: username, password: password) { [weak self] authResult, error in
+                guard let self = self else { return }
+
+                if let error = error {
+                    // Show error alert if login fails
+                    self.showAlert(title: "Error", message: error.localizedDescription)
+                    return
+                }
+
+                DispatchQueue.main.async {
+                    // Perform navigation based on user type
+                    if username.lowercased().contains("employee") {
+                        self.performSegue(withIdentifier: "goToEmpHome", sender: sender)
+                    } else {
+                        self.performSegue(withIdentifier: "showDashboardSegue", sender: sender)
+                    }
+                }
+
+                // Log user ID for debugging purposes
+                if let user = Auth.auth().currentUser {
+                    print("Logged in as UID: \(user.uid)")
+                }
+            }
     }
 
     // Helper function to show an alert
