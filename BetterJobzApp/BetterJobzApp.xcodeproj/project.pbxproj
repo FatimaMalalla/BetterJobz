@@ -10,6 +10,17 @@
 		3F991F962D1D422F0067D923 /* JobApplication folder in Resources */ = {isa = PBXBuildFile; fileRef = 3F991F952D1D422F0067D923 /* JobApplication folder */; };
 		7422A75F2D1D327A00C1AD23 /* ImagePickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7422A75D2D1D327A00C1AD23 /* ImagePickerDelegate.swift */; };
 		7422A7602D1D327A00C1AD23 /* ProfileViewController 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7422A75E2D1D327A00C1AD23 /* ProfileViewController 2.swift */; };
+		7B49C0752D200C2700FF3995 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49C0742D200C2700FF3995 /* FilterViewController.swift */; };
+		7B49C0772D200C4400FF3995 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49C0762D200C4400FF3995 /* SearchViewController.swift */; };
+		7B49C0792D200C5D00FF3995 /* Jopss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49C0782D200C5D00FF3995 /* Jopss.swift */; };
+		7B49C07B2D200DF600FF3995 /* jmpstructlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49C07A2D200DF500FF3995 /* jmpstructlist.swift */; };
+		7B49C07D2D200E1900FF3995 /* JpmfirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49C07C2D200E1900FF3995 /* JpmfirstViewController.swift */; };
+		7B49C07F2D200E3600FF3995 /* JoblistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49C07E2D200E3600FF3995 /* JoblistViewController.swift */; };
+		7B49C0812D200E5500FF3995 /* UseroneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49C0802D200E5500FF3995 /* UseroneViewController.swift */; };
+		7B49C0832D200E7E00FF3995 /* UsertwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49C0822D200E7E00FF3995 /* UsertwoViewController.swift */; };
+		7B49C0852D20101900FF3995 /* ESearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49C0842D20101900FF3995 /* ESearchViewController.swift */; };
+		7B49C0872D20102D00FF3995 /* EFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49C0862D20102D00FF3995 /* EFilterViewController.swift */; };
+		7B49C0892D20107F00FF3995 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49C0882D20107F00FF3995 /* File.swift */; };
 		AC146F3B2D0F30CD00081473 /* GeneratedCVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC146F3A2D0F30CD00081473 /* GeneratedCVViewController.swift */; };
 		AC8559572D0F227B002DD57D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8559562D0F227B002DD57D /* GradientView.swift */; };
 		AC98437A2D1D91170085C628 /* ChefViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9843792D1D91170085C628 /* ChefViewController.swift */; };
@@ -53,7 +64,6 @@
 		D43E51B12CF5EE4300916325 /* SettingsStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43E51B02CF5EE4300916325 /* SettingsStoryBoard.storyboard */; };
 		D43E51B32CF5EEC800916325 /* EmpDashboardStroryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43E51B22CF5EEC800916325 /* EmpDashboardStroryBoard.storyboard */; };
 		D43E51B52CF5EEE500916325 /* EmpProfileStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43E51B42CF5EEE500916325 /* EmpProfileStoryBoard.storyboard */; };
-		D43E51B72CF5EF0900916325 /* JobPostingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43E51B62CF5EF0900916325 /* JobPostingStoryboard.storyboard */; };
 		D43E51B92CF6064200916325 /* DashboardStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43E51B82CF6064200916325 /* DashboardStoryBoard.storyboard */; };
 		D43E51BF2CF614D900916325 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43E51BE2CF614D900916325 /* DashboardViewController.swift */; };
 		E426ED062D1EE34B0094DDBF /* BaseTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E426ED052D1EE34B0094DDBF /* BaseTutorialViewController.swift */; };
@@ -86,6 +96,17 @@
 		3F991F952D1D422F0067D923 /* JobApplication folder */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "JobApplication folder"; sourceTree = "<group>"; };
 		7422A75D2D1D327A00C1AD23 /* ImagePickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerDelegate.swift; sourceTree = "<group>"; };
 		7422A75E2D1D327A00C1AD23 /* ProfileViewController 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController 2.swift"; sourceTree = "<group>"; };
+		7B49C0742D200C2700FF3995 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		7B49C0762D200C4400FF3995 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		7B49C0782D200C5D00FF3995 /* Jopss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jopss.swift; sourceTree = "<group>"; };
+		7B49C07A2D200DF500FF3995 /* jmpstructlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jmpstructlist.swift; sourceTree = "<group>"; };
+		7B49C07C2D200E1900FF3995 /* JpmfirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JpmfirstViewController.swift; sourceTree = "<group>"; };
+		7B49C07E2D200E3600FF3995 /* JoblistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoblistViewController.swift; sourceTree = "<group>"; };
+		7B49C0802D200E5500FF3995 /* UseroneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseroneViewController.swift; sourceTree = "<group>"; };
+		7B49C0822D200E7E00FF3995 /* UsertwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsertwoViewController.swift; sourceTree = "<group>"; };
+		7B49C0842D20101900FF3995 /* ESearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESearchViewController.swift; sourceTree = "<group>"; };
+		7B49C0862D20102D00FF3995 /* EFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EFilterViewController.swift; sourceTree = "<group>"; };
+		7B49C0882D20107F00FF3995 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		AC146F3A2D0F30CD00081473 /* GeneratedCVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedCVViewController.swift; sourceTree = "<group>"; };
 		AC8559562D0F227B002DD57D /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		AC9843792D1D91170085C628 /* ChefViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefViewController.swift; sourceTree = "<group>"; };
@@ -129,7 +150,6 @@
 		D43E51B02CF5EE4300916325 /* SettingsStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsStoryBoard.storyboard; sourceTree = "<group>"; };
 		D43E51B22CF5EEC800916325 /* EmpDashboardStroryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmpDashboardStroryBoard.storyboard; sourceTree = "<group>"; };
 		D43E51B42CF5EEE500916325 /* EmpProfileStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmpProfileStoryBoard.storyboard; sourceTree = "<group>"; };
-		D43E51B62CF5EF0900916325 /* JobPostingStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JobPostingStoryboard.storyboard; sourceTree = "<group>"; };
 		D43E51B82CF6064200916325 /* DashboardStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DashboardStoryBoard.storyboard; sourceTree = "<group>"; };
 		D43E51BE2CF614D900916325 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		E426ED052D1EE34B0094DDBF /* BaseTutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTutorialViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +231,9 @@
 				C311BCD52CFF3E980063F268 /* LoginViewController.swift */,
 				C311BCD32CFF3E0E0063F268 /* SignupViewController.swift */,
 				D43E51B82CF6064200916325 /* DashboardStoryBoard.storyboard */,
+				7B49C0782D200C5D00FF3995 /* Jopss.swift */,
+				7B49C0762D200C4400FF3995 /* SearchViewController.swift */,
+				7B49C0742D200C2700FF3995 /* FilterViewController.swift */,
 				AC9843792D1D91170085C628 /* ChefViewController.swift */,
 				AC98437F2D1D919B0085C628 /* EngineerViewController.swift */,
 				AC98437B2D1D91460085C628 /* SoftwareEngineerViewController.swift */,
@@ -246,7 +269,14 @@
 				CF18169A2D097C8C00D0162A /* SettingsViewController.swift */,
 				D43E51B42CF5EEE500916325 /* EmpProfileStoryBoard.storyboard */,
 				D43E51B22CF5EEC800916325 /* EmpDashboardStroryBoard.storyboard */,
-				D43E51B62CF5EF0900916325 /* JobPostingStoryboard.storyboard */,
+				7B49C0882D20107F00FF3995 /* File.swift */,
+				7B49C0862D20102D00FF3995 /* EFilterViewController.swift */,
+				7B49C0842D20101900FF3995 /* ESearchViewController.swift */,
+				7B49C07C2D200E1900FF3995 /* JpmfirstViewController.swift */,
+				7B49C07E2D200E3600FF3995 /* JoblistViewController.swift */,
+				7B49C0802D200E5500FF3995 /* UseroneViewController.swift */,
+				7B49C0822D200E7E00FF3995 /* UsertwoViewController.swift */,
+				7B49C07A2D200DF500FF3995 /* jmpstructlist.swift */,
 				D43E51832CF5EA3800916325 /* Assets.xcassets */,
 				AC8559562D0F227B002DD57D /* GradientView.swift */,
 				E49C14C52D1F0D7700957B7E /* GradientButton.swift */,
@@ -390,7 +420,6 @@
 				D43E51872CF5EA3800916325 /* LaunchScreen.storyboard in Resources */,
 				ACBFCBFE2D1D615200819FBD /* SkillStoryboard.storyboard in Resources */,
 				D43E51842CF5EA3800916325 /* Assets.xcassets in Resources */,
-				D43E51B72CF5EF0900916325 /* JobPostingStoryboard.storyboard in Resources */,
 				D43E51B52CF5EEE500916325 /* EmpProfileStoryBoard.storyboard in Resources */,
 				D43E51822CF5EA3600916325 /* Main.storyboard in Resources */,
 				D43E51B12CF5EE4300916325 /* SettingsStoryBoard.storyboard in Resources */,
@@ -431,8 +460,11 @@
 				C311BCD42CFF3E0E0063F268 /* SignupViewController.swift in Sources */,
 				AC8559572D0F227B002DD57D /* GradientView.swift in Sources */,
 				E43CD12A2D1FE77400CDC02A /* ButtonsJobTableViewController.swift in Sources */,
+				7B49C07F2D200E3600FF3995 /* JoblistViewController.swift in Sources */,
+				7B49C0812D200E5500FF3995 /* UseroneViewController.swift in Sources */,
 				ACBFCC022D1D666700819FBD /* ArticleSecondPageViewController.swift in Sources */,
 				E426ED0C2D1EE5C30094DDBF /* TutorialSecondPageViewController.swift in Sources */,
+				7B49C0892D20107F00FF3995 /* File.swift in Sources */,
 				ACBFCC002D1D64EF00819FBD /* ArticleFirstPageViewController.swift in Sources */,
 				D43E517F2CF5EA3600916325 /* ViewController.swift in Sources */,
 				D43E517B2CF5EA3600916325 /* AppDelegate.swift in Sources */,
@@ -441,22 +473,30 @@
 				D43E51BF2CF614D900916325 /* DashboardViewController.swift in Sources */,
 				ACBFCC0A2D1D784F00819FBD /* ButtonsSkillViewController.swift in Sources */,
 				C345BACC2D0B351900205693 /* CVToolViewController.swift in Sources */,
+				7B49C0772D200C4400FF3995 /* SearchViewController.swift in Sources */,
 				AC146F3B2D0F30CD00081473 /* GeneratedCVViewController.swift in Sources */,
+				7B49C07D2D200E1900FF3995 /* JpmfirstViewController.swift in Sources */,
+				7B49C0832D200E7E00FF3995 /* UsertwoViewController.swift in Sources */,
 				C345BAD42D0B403200205693 /* SkillsViewController.swift in Sources */,
 				E49C14C02D1EFE9A00957B7E /* JobApplicationTableViewController.swift in Sources */,
 				ACBFCC062D1D681400819FBD /* TutorialFirstPageViewController.swift in Sources */,
 				7422A75F2D1D327A00C1AD23 /* ImagePickerDelegate.swift in Sources */,
+				7B49C0752D200C2700FF3995 /* FilterViewController.swift in Sources */,
+				7B49C0852D20101900FF3995 /* ESearchViewController.swift in Sources */,
 				7422A7602D1D327A00C1AD23 /* ProfileViewController 2.swift in Sources */,
 				E426ED0E2D1EF1FD0094DDBF /* BaseVideoViewController.swift in Sources */,
 				AC98437A2D1D91170085C628 /* ChefViewController.swift in Sources */,
 				C345BAD82D0B49F100205693 /* WorkEXPViewController.swift in Sources */,
 				D43E517D2CF5EA3600916325 /* SceneDelegate.swift in Sources */,
+				7B49C07B2D200DF600FF3995 /* jmpstructlist.swift in Sources */,
 				AC98437C2D1D91460085C628 /* SoftwareEngineerViewController.swift in Sources */,
 				E49C14C62D1F0D7700957B7E /* GradientButton.swift in Sources */,
 				C3F131EA2D0AF55600861187 /* TabBarViewController.swift in Sources */,
 				E426ED062D1EE34B0094DDBF /* BaseTutorialViewController.swift in Sources */,
 				CF18169B2D097C8C00D0162A /* SettingsViewController.swift in Sources */,
+				7B49C0872D20102D00FF3995 /* EFilterViewController.swift in Sources */,
 				ACBFCC042D1D676500819FBD /* VideoViewController.swift in Sources */,
+				7B49C0792D200C5D00FF3995 /* Jopss.swift in Sources */,
 				C3F132002D0B20A900861187 /* AboutMeViewController.swift in Sources */,
 				AC98437E2D1D91610085C628 /* TeacherViewController.swift in Sources */,
 			);
