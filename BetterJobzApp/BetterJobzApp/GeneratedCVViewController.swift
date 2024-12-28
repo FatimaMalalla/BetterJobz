@@ -291,31 +291,49 @@ class GeneratedCVViewController: UIViewController {
         )
         UIGraphicsEndPDFContext()
 
-        let fileManager = FileManager.default
-        let docsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let pdfURL = docsURL.appendingPathComponent("GeneratedCV.pdf")
+        let temporaryDirectory = FileManager.default.temporaryDirectory
+        let pdfURL = temporaryDirectory.appendingPathComponent("GeneratedCV.pdf")
 
         do {
             try pdfData.write(to: pdfURL)
-            showAlert(title: "Success", message: "PDF saved successfully at \(pdfURL.path)")
+
+            let documentPicker = UIDocumentPickerViewController(forExporting: [pdfURL])
+            documentPicker.modalPresentationStyle = .formSheet
+            self.present(documentPicker, animated: true, completion: nil)
         } catch {
-            showAlert(title: "Error", message: "Failed to save PDF: \(error.localizedDescription)")
+            showAlert(title: "Error", message: "Failed to generate PDF: \(error.localizedDescription)")
         }
     }
 
-    // MARK: Save as DOC (Plain Text File)
     private func saveAsDoc(cvContent: String) {
-        let fileManager = FileManager.default
-        let docsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let docURL = docsURL.appendingPathComponent("GeneratedCV.doc")
+        let temporaryDirectory = FileManager.default.temporaryDirectory
+        let docURL = temporaryDirectory.appendingPathComponent("GeneratedCV.doc")
 
         do {
             try cvContent.write(to: docURL, atomically: true, encoding: .utf8)
-            showAlert(title: "Success", message: "DOC file saved successfully at \(docURL.path)")
+
+            let documentPicker = UIDocumentPickerViewController(forExporting: [docURL])
+            documentPicker.modalPresentationStyle = .formSheet
+            self.present(documentPicker, animated: true, completion: nil)
         } catch {
             showAlert(title: "Error", message: "Failed to save DOC file: \(error.localizedDescription)")
         }
     }
+
+
+//    // MARK: Save as DOC (Plain Text File)
+//    private func saveAsDoc(cvContent: String) {
+//        let fileManager = FileManager.default
+//        let docsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
+//        let docURL = docsURL.appendingPathComponent("GeneratedCV.doc")
+//
+//        do {
+//            try cvContent.write(to: docURL, atomically: true, encoding: .utf8)
+//            showAlert(title: "Success", message: "DOC file saved successfully at \(docURL.path)")
+//        } catch {
+//            showAlert(title: "Error", message: "Failed to save DOC file: \(error.localizedDescription)")
+//        }
+//    }
 
     // Helper Method to Show Alerts
     private func showAlert(title: String, message: String) {
