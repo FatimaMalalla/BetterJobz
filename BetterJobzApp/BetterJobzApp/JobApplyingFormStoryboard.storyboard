@@ -3,7 +3,6 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -221,8 +220,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brief Description of Current Job" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TG-gN-lDS">
-                                                    <rect key="frame" x="63" y="297" width="242" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brief Description of Previous Job" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TG-gN-lDS">
+                                                    <rect key="frame" x="63" y="297" width="262" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -247,7 +246,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bjH-y6-z19">
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="top" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bjH-y6-z19">
                                                     <rect key="frame" x="63" y="326" width="262" height="175"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -270,7 +269,6 @@
                                                     <buttonConfiguration key="configuration" style="filled" title="Next"/>
                                                     <connections>
                                                         <action selector="unemployedNextButtonTapped:" destination="Zvb-lk-vSX" eventType="touchUpInside" id="0QX-BF-7Rv"/>
-                                                        <segue destination="c0h-LL-KcX" kind="show" id="pCk-gU-6SP"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -317,7 +315,7 @@
                                                 <constraint firstItem="bQb-1e-yOv" firstAttribute="top" secondItem="N9H-l8-w7b" secondAttribute="top" id="w8O-fr-bmu"/>
                                                 <constraint firstAttribute="bottom" secondItem="1cg-oa-MAI" secondAttribute="bottom" constant="357" id="xqk-sD-D2L"/>
                                                 <constraint firstAttribute="trailing" secondItem="GSN-d1-tKa" secondAttribute="trailing" constant="260" id="xxA-lz-5J7"/>
-                                                <constraint firstAttribute="trailing" secondItem="2TG-gN-lDS" secondAttribute="trailing" constant="88" id="yf9-Fx-aKa"/>
+                                                <constraint firstAttribute="trailing" secondItem="2TG-gN-lDS" secondAttribute="trailing" constant="68" id="yf9-Fx-aKa"/>
                                                 <constraint firstAttribute="trailing" secondItem="AoT-GY-mhA" secondAttribute="trailing" constant="68" id="zef-b5-Vqf"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -337,6 +335,7 @@
                         <outlet property="previousJobDesc" destination="bjH-y6-z19" id="wkw-Rt-e3g"/>
                         <outlet property="previousJobTitle" destination="Scl-tT-9xL" id="7H8-QX-B6N"/>
                         <outlet property="startDate" destination="kkQ-vN-fPx" id="0Qy-de-EV6"/>
+                        <segue destination="c0h-LL-KcX" kind="show" identifier="next" id="Xwe-Dc-u6W"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ih6-0f-iYG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -361,8 +360,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="640"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Education" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sM-KG-XUT">
-                                                    <rect key="frame" x="70" y="132" width="76" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place of Education" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sM-KG-XUT">
+                                                    <rect key="frame" x="70" y="132" width="151" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -411,7 +410,6 @@
                                                     <buttonConfiguration key="configuration" style="filled" title="Next"/>
                                                     <connections>
                                                         <action selector="qualificationNextButtonTapped:" destination="c0h-LL-KcX" eventType="touchUpInside" id="Av7-ol-MvK"/>
-                                                        <segue destination="IWC-I0-Rf1" kind="show" id="MQX-a0-LNd"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -422,7 +420,7 @@
                                                 <constraint firstItem="1Qn-8h-5QW" firstAttribute="top" secondItem="Ppk-7h-CSs" secondAttribute="top" constant="74" id="21e-b6-Spt"/>
                                                 <constraint firstItem="tmJ-5e-PKd" firstAttribute="leading" secondItem="Ppk-7h-CSs" secondAttribute="leading" constant="145" id="2J6-LF-koi"/>
                                                 <constraint firstItem="rcE-QM-SpE" firstAttribute="leading" secondItem="Ppk-7h-CSs" secondAttribute="leading" constant="70" id="7GD-8c-3qY"/>
-                                                <constraint firstAttribute="trailing" secondItem="3sM-KG-XUT" secondAttribute="trailing" constant="247" id="8df-dC-xkn"/>
+                                                <constraint firstAttribute="trailing" secondItem="3sM-KG-XUT" secondAttribute="trailing" constant="172" id="8df-dC-xkn"/>
                                                 <constraint firstItem="3sM-KG-XUT" firstAttribute="leading" secondItem="Ppk-7h-CSs" secondAttribute="leading" constant="70" id="9yW-K5-Jre"/>
                                                 <constraint firstAttribute="trailing" secondItem="tmJ-5e-PKd" secondAttribute="trailing" constant="146" id="GWH-eU-y9L"/>
                                                 <constraint firstItem="tmJ-5e-PKd" firstAttribute="top" secondItem="Ppk-7h-CSs" secondAttribute="top" constant="448" id="GdY-Ye-a68"/>
@@ -469,11 +467,12 @@
                         <outlet property="education" destination="0YP-i7-BEh" id="s62-SQ-5If"/>
                         <outlet property="skills" destination="1Qn-8h-5QW" id="cB0-nR-TPY"/>
                         <outlet property="yearsOfExperience" destination="eBn-Lf-sva" id="2GO-9U-5MY"/>
+                        <segue destination="IWC-I0-Rf1" kind="show" identifier="quali" id="rNd-kU-Sfe"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pmz-98-9AF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="508" y="-396"/>
+            <point key="canvasLocation" x="507.63358778625951" y="-396.47887323943667"/>
         </scene>
         <!--Cover Letter-->
         <scene sceneID="Eft-St-MvA">
@@ -516,7 +515,6 @@
                                                     </buttonConfiguration>
                                                     <connections>
                                                         <action selector="coverLetterFinishButtonTapped:" destination="IWC-I0-Rf1" eventType="touchUpInside" id="7wh-zU-BRL"/>
-                                                        <segue destination="xG6-t8-m2U" kind="show" id="2ZG-uq-GGH"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -533,36 +531,22 @@
                     <navigationItem key="navigationItem" title="Cover Letter" id="rcB-eE-vVb"/>
                     <connections>
                         <outlet property="letterOfIntent" destination="RBe-UD-J43" id="PUX-M1-YEs"/>
+                        <segue destination="ie2-Wd-RfB" kind="presentation" identifier="done" modalPresentationStyle="fullScreen" id="vb1-N3-hHe"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ylx-S7-xJi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="507.63358778625951" y="295.77464788732397"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Syl-SL-Eyd">
+        <!--DashboardStoryBoard-->
+        <scene sceneID="3ew-MF-LJz">
             <objects>
-                <viewController id="xG6-t8-m2U" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="S4Z-2o-AsR">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Finished" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5O-Y8-x4S">
-                                <rect key="frame" x="164" y="301" width="64" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Ye5-wQ-1tR"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="CgE-a8-Otz"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e5R-Vz-jSR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="SoftwareEngineerStatusViewController" storyboardName="DashboardStoryBoard" id="ie2-Wd-RfB" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="miZ-ug-Wu7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Mp-JD-Ixz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="508" y="986"/>
+            <point key="canvasLocation" x="508" y="713"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hry-il-dE1">
@@ -582,7 +566,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pCk-gU-6SP"/>
+        <segue reference="Xwe-Dc-u6W"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
@@ -590,7 +574,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

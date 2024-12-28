@@ -111,28 +111,48 @@ class JobApplicationTableViewController: UITableViewController {
             "Description of Previous Job": pDescription
         ]
         
-        ref.child("users").child(userID).child("job_details").child("Previous_Job_Details").setValue(jobApplicationData)
+        ref.child("users").child(userID).child("job_details").child("Previous_Job_Details").setValue(jobApplicationData){ error, _ in
+            if let error = error {
+                // Show error if Firebase save fails
+                self.showAlert(title: "Error", message: "Failed to save data: \(error.localizedDescription)")
+            } else {
+                // Perform segue only if data is saved successfully
+                self.performSegue(withIdentifier: "next", sender: nil)
+            }
+        }
     }
     
     // Qualification Next button
     @IBAction func qualificationNextButtonTapped(_ sender: Any) {
-        guard let skillBox = skills.text, !skillBox.isEmpty,
-              let educationBox = education.text, !educationBox.isEmpty,
-              let certificationsBox = certifications.text, !certificationsBox.isEmpty,
-              let yearsOfExperienceBox = yearsOfExperience.text, !yearsOfExperienceBox.isEmpty
-        else{
-            showAlert(title: "Error", message: "All fields are required.")
-            return
+        // Validate all fields
+            guard let skillBox = skills.text, !skillBox.isEmpty,
+                  let educationBox = education.text, !educationBox.isEmpty,
+                  let certificationsBox = certifications.text, !certificationsBox.isEmpty,
+                  let yearsOfExperienceBox = yearsOfExperience.text, !yearsOfExperienceBox.isEmpty
+            else {
+                // Show alert and stop further action
+                showAlert(title: "Error", message: "All fields are required.")
+                return
             }
-        
-        let jobApplicationData: [String: Any] = [
-            "Skills": skillBox,
-            "Education": educationBox,
-            "Certifications": certificationsBox,
-            "Years of Experience": yearsOfExperienceBox
-        ]
-        
-        ref.child("users").child(userID).child("job_details").child("Qualifications_Details").setValue(jobApplicationData)
+            
+            // Prepare data to save
+            let jobApplicationData: [String: Any] = [
+                "Skills": skillBox,
+                "Education": educationBox,
+                "Certifications": certificationsBox,
+                "Years of Experience": yearsOfExperienceBox
+            ]
+            
+            // Save data to Firebase
+            ref.child("users").child(userID).child("job_details").child("Qualifications_Details").setValue(jobApplicationData) { error, _ in
+                if let error = error {
+                    // Show error if Firebase save fails
+                    self.showAlert(title: "Error", message: "Failed to save data: \(error.localizedDescription)")
+                } else {
+                    // Perform segue only if data is saved successfully
+                    self.performSegue(withIdentifier: "quali", sender: nil)
+                }
+            }
     }
     
     // Cover letter finish button
@@ -148,7 +168,20 @@ class JobApplicationTableViewController: UITableViewController {
             "Letter of Intent": letterOfIntentBox
             ]
         
-        ref.child("users").child(userID).child("job_details").child("Letter_of_Intent").setValue(jobApplicationData)
+        ref.child("users").child(userID).child("job_details").child("Letter_of_Intent").setValue(jobApplicationData){ error, _ in
+            if let error = error {
+                // Show error alert if saving fails
+                self.showAlert(title: "Error", message: "Failed to save data: \(error.localizedDescription)")
+            } else {
+                // Show success alert
+                let alert = UIAlertController(title: "Success", message: "Your application has been successfully submitted.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+                    // Perform segue after user taps "OK"
+                    self.performSegue(withIdentifier: "done", sender: nil)
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
     }
     
     

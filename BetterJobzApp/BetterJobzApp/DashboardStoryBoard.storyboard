@@ -4933,7 +4933,7 @@ goldenspoon.jobs@gmail.com
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="bDF-1d-1ko"/>
-        <segue reference="R8e-2b-pkH"/>
+        <segue reference="Fgg-Co-Kd5"/>
         <segue reference="jGJ-ua-wTf"/>
         <segue reference="y8Q-dV-3yr"/>
     </inferredMetricsTieBreakers>
@@ -4954,7 +4954,7 @@ goldenspoon.jobs@gmail.com
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
